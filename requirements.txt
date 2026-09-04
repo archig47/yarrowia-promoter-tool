@@ -1,0 +1,16 @@
+torch
+transformers
+peft
+accelerate
+datasets
+einops
+scikit-learn
+lightgbm
+pandas
+pyarrow
+numpy
+scipy
+matplotlib
+seaborn
+tqdm
+logomaker
