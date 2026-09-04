@@ -1,0 +1,8 @@
+{
+  "train_rows_total": 31349363,
+  "excluded_rows": 6651,
+  "excluded_frac": 0.00021215742087008274,
+  "test_rows": 9982,
+  "test_frac_found_in_train": 0.6662993388098577,
+  "reason": "pTpA_3E5 high-quality library is a dilution of the same pool as pTpA_1E8 (GEO growth protocol); sequences overlap. Excluded from training to keep the primary test set genuinely held out."
+}

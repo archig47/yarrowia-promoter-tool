@@ -1,0 +1,11 @@
+{
+  "n_sequences": 200000,
+  "n_clusters": 199680,
+  "singletons": 199360,
+  "frac_singleton": 0.9983974358974359,
+  "largest_cluster": 2,
+  "size_distribution": {
+    "1": 199360,
+    "2": 320
+  }
+}
