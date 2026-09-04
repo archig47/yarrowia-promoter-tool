@@ -30,6 +30,28 @@ Headline framing: how many randomly chosen measurements does a well-chosen 300 r
 ISM -> TF-MoDISco -> match against yeast TF PWMs. Ground truth: de Boer Supplementary
 Table 2 (motifs from YeTFaSCo, plus a poly-A motif AAAAA).
 
+### D4a. Transfer ladder (ADDED 2026-09-04, approved scope change)
+Isolate one variable at a time before the two-variable Yarrowia jump, so a weak
+D4 result is interpretable rather than ambiguous:
+
+| Step | What changes | Data | n |
+|------|--------------|------|---|
+| held-out random | nothing | frozen splits | 10,000 |
+| **Native80** | **random -> real evolved sequence** | GSE104878 Native80 file | 62,897 native |
+| (matched control) | nothing - same assay/batch | N80 spike-ins in that file | 8,027 |
+| galactose / glycerol | growth condition | GEO, ~1GB, optional | - |
+| Yarrowia (D4) | species AND sequence type | needs curation | 80-300 |
+
+Native80 constructs are 120bp: 20bp flanks either side of an exact 80bp insert
+(vs 17/13 for pTpA). Trim accordingly - the flank lengths differ between files.
+NOTE: the 8,027 spike-ins are already in the primary test set. They are a
+matched control, not additional evaluation data. Do not double-count them.
+
+**Measured noise ceiling** (rep1 vs rep2 Spearman, from this file):
+random 0.980, native 0.934. Draw these on curves alongside de Boer's ~24%
+noise estimate for the 1E8 training library - they are ceilings for different
+data and both are needed.
+
 ### D4. Yarrowia transfer benchmark
 Curated set of characterised *Y. lipolytica* promoters from the hybrid-promoter
 literature. Zero-shot transfer, then LoRA on ~50 examples.

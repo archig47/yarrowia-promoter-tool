@@ -31,6 +31,7 @@ Next: Day 3 baselines (k-mer ridge, LightGBM, CNN).
 | D2 | Selection curves | not started | |
 | D3 | Motif recovery | not started | |
 | D4 | Yarrowia transfer | not started | |
+| D4a | Transfer ladder | data secured | Native80 downloaded, verified, ceiling measured |
 
 Status values: not started / in progress / blocked / done
 
@@ -53,9 +54,10 @@ Status values: not started / in progress / blocked / done
 ## Open decisions
 
 - ~~Read-count filter threshold~~ — CLOSED: no read counts published, no threshold exists
-- Compute: local machine is an M2 / 16GB / no CUDA. Unsuitable for Day 4 LoRA runs
-  (DNABERT-2's triton/flash-attn stack is CUDA-oriented). Rented GPU effectively
-  required. Not decided which; blocks Day 4, not Day 1-3.
+- Compute: RESOLVED. RTX 5090 (32GB) available via SSH on a family machine. Ample for
+  DNABERT-2 and NT-2.5B under LoRA. Setup notes: Blackwell needs CUDA 12.8+ and a
+  matching recent PyTorch; DNABERT-2's pinned triton/flash-attn will likely need
+  disabling on a card this new. Duration of access not yet confirmed.
 
 ---
 
@@ -74,6 +76,9 @@ None yet.
 - 2026-09-04 — Sequence convention frozen: trim 17bp 5' + 13bp 3' constant scaffold (confirmed empirically by base conservation AND independently by the GEO series design). Keep all sequences, no length filtering, pad to 95 for CNN and TF-MoDISco. Rationale: indels concentrate in homopolymer runs, so length-filtering would systematically deplete the poly-A motif that D3 is meant to recover.
 - 2026-09-04 — WRONG, corrected same day: train and test are NOT independent. 6,651 of 9,982 test sequences (66.6%) appear verbatim in training. Cause: the high-quality pTpA_3E5 library is a dilution of the same pool as pTpA_1E8, not a separate synthesis (GEO growth protocol). Those 6,651 training rows (0.021%) are excluded from all subsamples. Test set untouched at 9,982.
 - 2026-09-04 — Clustering measured, not assumed: 200k pool gives 199,680 clusters, 99.84% singletons, largest cluster 2 (320 near-duplicate pairs, consistent with PCR/sequencing error). Cluster split is therefore near-identical to a random split. Both are kept and reported per PLAN.md; the coincidence is itself a finding about random-sequence libraries. MMseqs2 run on the 200k working pool rather than all 31.3M - confirming 31M singletons would cost hours and change nothing.
+- 2026-09-04 — Transfer ladder (D4a) added as approved scope change: evaluate on Native80 (62,897 real yeast 80-mers, same scaffold/assay/organism) to isolate the random->natural shift before the two-variable Yarrowia jump. Zero cost - 4MB file already on GEO.
+- 2026-09-04 — Noise ceiling MEASURED, not estimated: rep1 vs rep2 Spearman 0.980 (random spike-ins), 0.934 (native). Distinct from de Boer's ~24% estimate, which describes the noisy 1E8 training library. Both belong on scaling curves.
+- 2026-09-04 — Native80 overlap checked at INSERT level after an initial full-sequence check gave a false 'zero overlap' (constructs are 120bp with 20bp flanks, vs 110bp/17+13bp for pTpA). Correct result: all 8,027 random spike-ins are already in the primary test set (matched control, not new data); 62,897 native sequences are new; zero overlap with the training pool.
 - 2026-09-04 — evaluate.py frozen with three additions beyond PLAN.md's spec: test-set fingerprint (makes non-comparable results detectable - this is the guard against the leakage class of bug), RMSE/MAE (absolute error, not just correlation), precision@k (tail accuracy; a model at rho=0.82 had only 3/10 of its top-10 correct).
 - 2026-09-04 — Prior June 2026 attempt at this project (different scope: synthetic data augmentation) deleted after confirming its data files were byte-identical. Git history preserved as notebooks/june2026_prior_attempt.bundle.
 
