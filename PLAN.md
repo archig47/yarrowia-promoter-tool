@@ -54,12 +54,18 @@ Rank correlation only. Bootstrap CIs. Caveats loud.
 
 ### Days 1-2 — Data and harness. No modelling.
 - de Boer et al. 2020, GEO **GSE104878**. pTpA scaffold, glucose condition.
-  80 bp random inserts, label = log2(YFP/RFP) from 18 FACS sorting bins.
+  80 bp random inserts, label = expression level (EL), a weighted average over the 18
+  FACS sorting bins, range ~1.5-16.7. (The paper's "log2(YFP/RFP)" phrasing does not
+  describe the published values — corrected 2026-09-04 from the data.)
 - Download three things: pTpA/glucose training data; the **high-quality pTpA/glucose
   test set (n ~ 9,982)**; Supplementary Table 2 (TF motifs). Grab galactose and
   glycerol conditions too — free external validation later at no extra effort.
-- **Filter by read count.** Low-read sequences carry very noisy labels and will
-  silently cap every downstream correlation.
+- ~~**Filter by read count.**~~ **NOT POSSIBLE — de Boer published no per-sequence read
+  counts.** Both distributed files carry sequence + expression level only. The
+  `atLeast100Counts` file IS the read-count-filtered subset (>=100 reads) and serves as
+  the test set; the training data cannot be filtered. The ~24% noise estimate below
+  quantifies exactly this. Consequence: absolute data-efficiency numbers are pessimistic;
+  method comparisons are unaffected. Goes in Limitations. Superseded 2026-09-04.
 - **Noise ceiling is known:** authors estimate ~24% noise in training data
   (their model explains 68.3% of held-out training data vs 92.6% of high-quality data).
   Draw this on every scaling curve.
