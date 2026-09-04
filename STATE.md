@@ -4,7 +4,7 @@ Living handoff document. Update at the end of every working session.
 Keep it under one page — status board, not a log.
 
 **Last updated:** 2026-09-04 (Day 1)
-**Day:** 1 of 14
+**Day:** 3 of 14 (running ahead: Days 1-2 finished on Day 1)
 **Checkpoint:** 1
 
 ---
@@ -27,11 +27,11 @@ Next: Day 3 baselines (k-mer ridge, LightGBM, CNN).
 
 | ID | Deliverable | Status | Notes |
 |----|-------------|--------|-------|
-| D1 | Scaling curves | not started | harness + splits ready; Day 3 baselines next |
+| D1 | Scaling curves | in progress | ridge done (168 runs, both splits, 4 eval sets); LightGBM + CNN next |
 | D2 | Selection curves | not started | |
 | D3 | Motif recovery | not started | |
 | D4 | Yarrowia transfer | not started | |
-| D4a | Transfer ladder | data secured | Native80 downloaded, verified, ceiling measured |
+| D4a | Transfer ladder | first result | random->natural costs ~0.09 Spearman (0.874 spikein vs 0.780 native, ridge n=100k) |
 
 Status values: not started / in progress / blocked / done
 
@@ -76,6 +76,9 @@ None yet.
 - 2026-09-04 — Sequence convention frozen: trim 17bp 5' + 13bp 3' constant scaffold (confirmed empirically by base conservation AND independently by the GEO series design). Keep all sequences, no length filtering, pad to 95 for CNN and TF-MoDISco. Rationale: indels concentrate in homopolymer runs, so length-filtering would systematically deplete the poly-A motif that D3 is meant to recover.
 - 2026-09-04 — WRONG, corrected same day: train and test are NOT independent. 6,651 of 9,982 test sequences (66.6%) appear verbatim in training. Cause: the high-quality pTpA_3E5 library is a dilution of the same pool as pTpA_1E8, not a separate synthesis (GEO growth protocol). Those 6,651 training rows (0.021%) are excluded from all subsamples. Test set untouched at 9,982.
 - 2026-09-04 — Clustering measured, not assumed: 200k pool gives 199,680 clusters, 99.84% singletons, largest cluster 2 (320 near-duplicate pairs, consistent with PCR/sequencing error). Cluster split is therefore near-identical to a random split. Both are kept and reported per PLAN.md; the coincidence is itself a finding about random-sequence libraries. MMseqs2 run on the 200k working pool rather than all 31.3M - confirming 31M singletons would cost hours and change nothing.
+- 2026-09-04 — Ridge baseline complete and VERIFIED. Negative control (shuffled training labels) gives rho -0.06..+0.10 vs +0.68..+0.87 with real labels: no leakage through features, indices or evaluation. Four internal checks pass: cluster and random splits agree to 3dp (0.8647 vs 0.8644 at n=100k); primary beats secondary by exactly the margin label noise predicts (0.865 vs 0.738); the Native80 spike-in control matches the primary test set (0.874 vs 0.865) despite different files/experiments; native sequences sit 0.09 below matched random controls.
+- 2026-09-04 — Q1 PREDICTION FALSIFIED (do not edit PREDICTIONS.md - record in Outcomes at write-up). Predicted ridge 0.20 at n=100 and a ~0.70 plateau. Actual: 0.426 at n=100, 0.683 at n=1,000, 0.865 at n=100,000 and still climbing. The task is far more learnable from 6-mer features at low n than expected. Sets a high bar for the LMs on Day 4.
+- 2026-09-04 — precision@100 <= 0.16 at every n despite Spearman up to 0.865. Bulk ranking is good, extreme-tail ranking is poor. Relevant to any design application; invisible if only correlation is reported.
 - 2026-09-04 — Transfer ladder (D4a) added as approved scope change: evaluate on Native80 (62,897 real yeast 80-mers, same scaffold/assay/organism) to isolate the random->natural shift before the two-variable Yarrowia jump. Zero cost - 4MB file already on GEO.
 - 2026-09-04 — Noise ceiling MEASURED, not estimated: rep1 vs rep2 Spearman 0.980 (random spike-ins), 0.934 (native). Distinct from de Boer's ~24% estimate, which describes the noisy 1E8 training library. Both belong on scaling curves.
 - 2026-09-04 — Native80 overlap checked at INSERT level after an initial full-sequence check gave a false 'zero overlap' (constructs are 120bp with 20bp flanks, vs 110bp/17+13bp for pTpA). Correct result: all 8,027 random spike-ins are already in the primary test set (matched control, not new data); 62,897 native sequences are new; zero overlap with the training pool.
