@@ -28,9 +28,16 @@ SEEDS = [0, 1, 2]
 MAX_EPOCHS = {100: 60, 300: 60, 1000: 40, 3000: 30, 10000: 20, 30000: 12, 100000: 8}
 PATIENCE = 5
 
+# LoRA targets are per-model because the architectures name things differently:
+# DNABERT-2 fuses attention into Wqkv with a gated MLP (gated_layers/wo); NT is
+# ESM-style with separate query/key/value and 'dense' for the attention output
+# and both MLP projections. Both amount to "attention + MLP", per the choice made
+# on Day 4. Names are validated against the loaded model before training.
 MODELS = {
-    "dnabert": dict(id="zhihan1996/DNABERT-2-117M", custom=True),
-    "nt":      dict(id="InstaDeepAI/nucleotide-transformer-v2-500m-multi-species", custom=False),
+    "dnabert": dict(id="zhihan1996/DNABERT-2-117M", kind="dnabert",
+                    targets=["Wqkv", "gated_layers", "wo"]),
+    "nt":      dict(id="InstaDeepAI/nucleotide-transformer-v2-500m-multi-species",
+                    kind="esm", targets=["query", "key", "value", "dense"]),
 }
 
 
@@ -67,24 +74,36 @@ def build(kind):
     spec = MODELS[kind]
     tok = AutoTokenizer.from_pretrained(spec["id"], trust_remote_code=True)
     cfg = AutoConfig.from_pretrained(spec["id"], trust_remote_code=True)
-    if spec["custom"]:
+    if spec["kind"] == "dnabert":
         from dnabert import load_dnabert
         tok, bb, cfg = load_dnabert(spec["id"])
     else:
-        from transformers import AutoModel
-        bb = AutoModel.from_pretrained(spec["id"], trust_remote_code=True)
+        # NT v2 ships a custom config class, and its auto_map exposes
+        # AutoModelForMaskedLM but not AutoModel. Load the masked-LM wrapper and
+        # take its encoder as the backbone.
+        from transformers import AutoModelForMaskedLM
+        full = AutoModelForMaskedLM.from_pretrained(spec["id"], trust_remote_code=True)
+        bb = getattr(full, "esm", None) or getattr(full, "bert", None) or full
     return tok, bb, cfg
 
 
-def lora_targets(backbone, want_mlp=True):
-    """Pick real module names. Attention first, then MLP if asked."""
+def lora_targets(backbone, kind):
+    """Validate this model's declared targets against what is really in it.
+
+    CLAUDE.md's warning: DNABERT-2's repo default is 'query,value', which matches
+    nothing because attention is fused. A target list that matches no module
+    attaches LoRA to nothing and yields a flat loss that looks like model failure,
+    so refuse to run rather than train a no-op.
+    """
     leaves = sorted({n.split(".")[-1] for n, m in backbone.named_modules()
                      if isinstance(m, torch.nn.Linear)})
-    attn = [n for n in leaves if n in ("Wqkv", "query", "key", "value", "q_proj", "k_proj", "v_proj")]
-    mlp = [n for n in leaves if n in ("gated_layers", "wo", "intermediate", "output", "fc1", "fc2")]
-    picked = attn + (mlp if want_mlp else [])
+    want = MODELS[kind]["targets"]
+    picked = [n for n in want if n in leaves]
+    missing = [n for n in want if n not in leaves]
     if not picked:
-        raise SystemExit(f"no LoRA targets matched. available leaves: {leaves}")
+        raise SystemExit(f"no LoRA targets matched for {kind}. wanted {want}, model has {leaves}")
+    if missing:
+        print(f"  WARNING: declared targets not present and skipped: {missing}", flush=True)
     return picked, leaves
 
 
@@ -93,7 +112,7 @@ def fit(kind, tok, seqs, y, seed, device="cuda"):
     from peft import LoraConfig, get_peft_model
     torch.manual_seed(seed)
     _, bb, cfg = build(kind)
-    targets, leaves = lora_targets(bb)
+    targets, leaves = lora_targets(bb, kind)
     peft_cfg = LoraConfig(r=8, lora_alpha=16, lora_dropout=0.05, bias="none",
                           target_modules=targets, task_type=None)
     bb = get_peft_model(bb, peft_cfg)
@@ -175,7 +194,7 @@ def main(kind, only_ns=None):
     t0 = time.time()
     pseq, py, tseq, ty, nseq, ny, isnat = load_all()
     tok, bb0, cfg0 = build(kind)
-    targets, leaves = lora_targets(bb0)
+    targets, leaves = lora_targets(bb0, kind)
     print(f"model={kind}  hidden={cfg0.hidden_size}  linear leaves={leaves}")
     print(f"LoRA targets -> {targets}", flush=True)
     del bb0
