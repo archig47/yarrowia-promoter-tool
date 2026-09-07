@@ -4,7 +4,7 @@ Living handoff document. Update at the end of every working session.
 Keep it under one page — status board, not a log.
 
 **Last updated:** 2026-09-04 (Day 1)
-**Day:** 3 of 14 COMPLETE (running ahead: Days 1-2 finished on Day 1)
+**Day:** 4 of 14 in progress (Days 1-3 done; Days 1-2 were finished early on Day 1)
 **Checkpoint:** 1
 
 ---
@@ -55,7 +55,11 @@ Status values: not started / in progress / blocked / done
 ## Open decisions
 
 - ~~Read-count filter threshold~~ — CLOSED: no read counts published, no threshold exists
-- Compute: RESOLVED. RTX 5090 (32GB) available via SSH on a family machine. Ample for
+- Compute: WORKING. RTX 5090 (32GB) reachable as `ssh gpu`, key auth, torch 2.11.0+cu128,
+  sm_120 confirmed, GPU matmul verified. Machine is WSL2 on Windows - the Windows host
+  sleeping will kill runs, so tmux protects against client disconnect only.
+  DISK IS TIGHT: 26GB free of 1TB (98% full) after the torch install.
+- (superseded) RTX 5090 (32GB) available via SSH on a family machine. Ample for
   DNABERT-2 and NT-2.5B under LoRA. Setup notes: Blackwell needs CUDA 12.8+ and a
   matching recent PyTorch; DNABERT-2's pinned triton/flash-attn will likely need
   disabling on a card this new. Duration of access not yet confirmed.
@@ -77,6 +81,9 @@ None yet.
 - 2026-09-04 — Sequence convention frozen: trim 17bp 5' + 13bp 3' constant scaffold (confirmed empirically by base conservation AND independently by the GEO series design). Keep all sequences, no length filtering, pad to 95 for CNN and TF-MoDISco. Rationale: indels concentrate in homopolymer runs, so length-filtering would systematically deplete the poly-A motif that D3 is meant to recover.
 - 2026-09-04 — WRONG, corrected same day: train and test are NOT independent. 6,651 of 9,982 test sequences (66.6%) appear verbatim in training. Cause: the high-quality pTpA_3E5 library is a dilution of the same pool as pTpA_1E8, not a separate synthesis (GEO growth protocol). Those 6,651 training rows (0.021%) are excluded from all subsamples. Test set untouched at 9,982.
 - 2026-09-04 — Clustering measured, not assumed: 200k pool gives 199,680 clusters, 99.84% singletons, largest cluster 2 (320 near-duplicate pairs, consistent with PCR/sequencing error). Cluster split is therefore near-identical to a random split. Both are kept and reported per PLAN.md; the coincidence is itself a finding about random-sequence libraries. MMseqs2 run on the 200k working pool rather than all 31.3M - confirming 31M singletons would cost hours and change nothing.
+- 2026-09-07 — DNABERT-2 loads and runs, after three separate incompatibilities. (a) Its remote code is from the transformers 4.28 era and fails outright on transformers 5.x (meta-device errors); pinned transformers==4.44.2 / peft==0.13.2. (b) Auto* classes refuse it even on 4.44 - the remote BertModel declares transformers' built-in BertConfig as config_class while the loaded config is the remote one, so Auto.register() rejects the mismatch; fixed by fetching the class via get_class_from_dynamic_module and attaching our own regression head. (c) The bundled triton flash-attention calls tl.dot(trans_b=True), removed from modern triton; bert_layers.py has a standard-attention fallback guarded on `flash_attn_qkvpacked_func is None`, so that module global is set to None at load time. Costs nothing - sequences are ~19 BPE tokens. All three documented in src/dnabert.py.
+- 2026-09-07 — CLAUDE.md's LoRA trap CONFIRMED empirically, not assumed. DNABERT-2's Linear leaf names are exactly ['Wqkv', 'dense', 'gated_layers', 'wo']. There is no 'query' and no 'value', so the repo's default lora_target_modules would match zero modules and produce a flat loss that looks like a model failure. LoRA targets Wqkv (attention is fused).
+- 2026-09-07 — Nucleotide Transformer will use the 500M checkpoint, not 2.5B. Reason: 26GB free disk on the GPU box; a ~10GB checkpoint leaves no margin. Deviation from the implicit reading of PLAN.md D1; record in Limitations alongside the tuning budget.
 - 2026-09-04 — DAY 3 COMPLETE. All three baselines across 7 sizes x 3 seeds x 2 splits x 4 eval sets (504 runs). Primary test, mean Spearman: CNN 0.521/0.728/0.838/0.897 at n=100/1k/10k/100k; ridge 0.422/0.679/0.806/0.865; LightGBM 0.066/0.406/0.784/0.839. CNN wins at EVERY n; ridge second everywhere; LightGBM last everywhere.
 - 2026-09-04 — Q1 falsified more completely than first recorded: the prediction that ridge wins at n=100 and n=1,000 is wrong - the CNN beats it at every size. What survives is a weaker, more precise claim: ridge is more RELIABLE at low n (seed sd 0.034 vs CNN 0.083 at n=100). CNN has the better mean and the worse worst case. Record both in Outcomes.
 - 2026-09-04 — LightGBM's n=100 result (0.066) is partly a tuning-budget artefact: early stopping is judged on a 20-sequence validation set. Honest claim is 'gradient boosting with this tuning budget fails at n=100', not 'trees cannot do this'. Checkpoint 2 item B addresses it.
