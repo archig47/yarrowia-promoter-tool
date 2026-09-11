@@ -42,7 +42,7 @@ Next after NT: Day 5-6 active learning (D2).
 |----|-------------|--------|-------|
 | D1 | Scaling curves | COMPLETE | All 5 models x 7 n x 3 seeds x 2 splits x 4 eval sets = 840 runs. Figures regenerate from results/. |
 | D2 | Selection curves | done (negative) | 48 runs. NO strategy beats random; uncertainty is consistently worse. A chosen 300 is worth ~219 random. fig3 generated. Re-run diversity with LM embeddings when the GPU returns. |
-| D3 | Motif recovery | not started | BLOCKER: de Boer Supp. Table 2 (TF motif ground truth) is on the journal site, not GEO, and has not been downloaded. Get it before Day 7. |
+| D3 | Motif recovery | ground truth ready | Supp Table 2 (245 motifs) + YeTFaSCo PFMs downloaded; 244/245 IDs match exactly. Next: ISM, then TF-MoDISco, then matching. |
 | D4 | Yarrowia transfer | not started | |
 | D4a | Transfer ladder | all 5 models | random->natural costs +0.089 to +0.105 Spearman across all model families at n=100k. Consistent, so a property of the task. DNABERT-2 has the best native score (0.813) and smallest drop. |
 
@@ -88,6 +88,7 @@ None. (GPU access resolved 2026-09-11 via ZeroTier - see decision log.)
 
 (append only, one line each: date — decision — reason)
 
+- 2026-09-11 — D3 ground truth fully assembled and verified. YeTFaSCo 1.02 All_PFMs (1,887 position frequency matrices) downloaded from yetfasco.ccbr.utoronto.ca; 244 of de Boer's 245 motif IDs match PFM filenames exactly, so no name reconciliation is needed. The tarball is gitignored (extracted files) but the archive is kept in data/raw/.
 - 2026-09-11 — D1 COMPLETE, all five models, 840 runs. Primary test, mean Spearman at n=100/300/1k/3k/10k/30k/100k: ridge .422/.563/.679/.756/.806/.832/.865; lgbm .066/.327/.406/.692/.784/.824/.839; cnn .521/.639/.728/.794/.838/.868/.897; dnabert .563/.702/.771/.801/.831/.868/.902; nt .471/.540/.729/.788/.828/.859/.888.
 - 2026-09-11 — THE SECOND LM DOES NOT REPLICATE THE FIRST, and this sharpens the headline. NT-500M loses to DNABERT-2 at every n and to the from-scratch CNN at most; at n=300 it falls below k-mer ridge (0.540 vs 0.563). So the defensible claim is not 'pretraining helps' but 'pretraining CAN substitute for measurements, and which pretrained model matters more than its size' - NT is 4x larger and loses. Caveats belonging with it: NT is the 500M checkpoint not 2.5B (disk), its LoRA targets and tokenisation differ because the architecture differs, and part of the gap may be tuning budget rather than the model, exactly as with LightGBM at n=100.
 - 2026-09-11 — Measurement equivalence with all five models: DNABERT-2 on 300 measurements matches a CNN on 700, NT on 842, ridge on 1,390. On 1,000 it matches a CNN on 2,067, NT on 2,213, ridge on 4,352.
