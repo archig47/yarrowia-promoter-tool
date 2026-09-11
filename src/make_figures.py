@@ -125,7 +125,41 @@ def fig2(df):
     print("wrote fig2_reliability.png/.pdf")
 
 
+def fig3():
+    """D2 selection curves. Regenerates from results/runs_d2.csv if present."""
+    f = ROOT / "results" / "runs_d2.csv"
+    if not f.exists():
+        print("no runs_d2.csv - skipping fig3"); return
+    d = pd.read_csv(f)
+    sty = {"random": ("#111111", "random", "-"),
+           "uncertainty": ("#D1495B", "uncertainty", "-"),
+           "diversity": ("#0D7377", "diversity", "-"),
+           "hybrid": ("#6B2D8B", "hybrid", "-")}
+    fig, ax = plt.subplots(figsize=(5.8, 4.2))
+    for st, (c, lab, ls) in sty.items():
+        sub = d[d.cfg_strategy == st]
+        if not len(sub): continue
+        g = sub.groupby("cfg_budget").overall_spearman.agg(["mean", "std"])
+        ax.errorbar(g.index, g["mean"], yerr=g["std"].fillna(0), color=c, lw=1.7, ls=ls,
+                    marker="o", ms=4.2, capsize=2.5, elinewidth=1, label=lab,
+                    zorder=5 if st == "random" else 3)
+    ax.set_xscale("log")
+    ax.set_xlabel("measurement budget")
+    ax.set_ylabel("Spearman $\\rho$  (held-out test set)")
+    ax.set_xticks([100, 300, 1000, 3000])
+    ax.set_xticklabels(["100", "300", "1k", "3k"])
+    ax.grid(axis="y", color="#E6E6E6", lw=0.6, zorder=0); ax.set_axisbelow(True)
+    ax.legend(fontsize=8, loc="lower right")
+    ax.set_title("Choosing which promoters to measure does not beat choosing at random",
+                 fontsize=9.5, loc="left", pad=10)
+    fig.tight_layout()
+    fig.savefig(FIG / "fig3_selection_curves.png", bbox_inches="tight")
+    fig.savefig(FIG / "fig3_selection_curves.pdf", bbox_inches="tight")
+    plt.close(fig)
+    print("wrote fig3_selection_curves.png/.pdf")
+
+
 if __name__ == "__main__":
     df = load()
     print("models present:", sorted(df.cfg_model.unique()))
-    fig1(df); fig2(df)
+    fig1(df); fig2(df); fig3()
