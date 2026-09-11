@@ -1,0 +1,130 @@
+{
+  "GA": {
+    "n": 6878,
+    "spearman": 0.7146
+  },
+  "Gini": {
+    "n": 4624,
+    "spearman": 0.3374
+  },
+  "Glu": {
+    "n": 25201,
+    "spearman": 0.7898
+  },
+  "SCUra": {
+    "n": 18666,
+    "spearman": 0.8036
+  },
+  "rand143_Reb1": {
+    "n": 302,
+    "spearman": 0.8711
+  },
+  "rand151_Azf1": {
+    "n": 72,
+    "spearman": 0.703
+  },
+  "rand151_Mga1": {
+    "n": 77,
+    "spearman": 0.7462
+  },
+  "rand151_Mot3": {
+    "n": 71,
+    "spearman": 0.7839
+  },
+  "rand151_Skn7": {
+    "n": 72,
+    "spearman": 0.7609
+  },
+  "rand151_Ume6": {
+    "n": 74,
+    "spearman": 0.6423
+  },
+  "rand151_polyA": {
+    "n": 76,
+    "spearman": 0.7805
+  },
+  "rand229_Reb1": {
+    "n": 302,
+    "spearman": 0.4916
+  },
+  "rand267_Reb1": {
+    "n": 302,
+    "spearman": 0.8248
+  },
+  "rand311_Azf1": {
+    "n": 71,
+    "spearman": 0.7862
+  },
+  "rand311_Mga1": {
+    "n": 77,
+    "spearman": 0.7993
+  },
+  "rand311_Mot3": {
+    "n": 72,
+    "spearman": 0.5691
+  },
+  "rand311_Skn7": {
+    "n": 72,
+    "spearman": 0.8276
+  },
+  "rand311_Ume6": {
+    "n": 74,
+    "spearman": 0.6485
+  },
+  "rand311_polyA": {
+    "n": 76,
+    "spearman": 0.7296
+  },
+  "rand466_Reb1": {
+    "n": 302,
+    "spearman": 0.8541
+  },
+  "rand705_Azf1": {
+    "n": 72,
+    "spearman": 0.6558
+  },
+  "rand705_Mga1": {
+    "n": 76,
+    "spearman": 0.6831
+  },
+  "rand705_Mot3": {
+    "n": 72,
+    "spearman": 0.3359
+  },
+  "rand705_Skn7": {
+    "n": 72,
+    "spearman": 0.755
+  },
+  "rand705_Ume6": {
+    "n": 74,
+    "spearman": 0.3817
+  },
+  "rand705_polyA": {
+    "n": 76,
+    "spearman": 0.5838
+  },
+  "rand72_Reb1": {
+    "n": 302,
+    "spearman": 0.7808
+  },
+  "rand74_Reb1": {
+    "n": 302,
+    "spearman": 0.766
+  },
+  "rand750_Reb1": {
+    "n": 302,
+    "spearman": 0.8278
+  },
+  "rand754_Reb1": {
+    "n": 302,
+    "spearman": 0.8503
+  },
+  "rand771_Reb1": {
+    "n": 301,
+    "spearman": 0.7969
+  },
+  "rand906_Reb1": {
+    "n": 301,
+    "spearman": 0.7069
+  }
+}

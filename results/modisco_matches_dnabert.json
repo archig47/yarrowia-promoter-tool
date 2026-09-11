@@ -1,0 +1,299 @@
+[
+  {
+    "group": "pos_patterns",
+    "pattern": "pattern_0",
+    "n_seqlets": 187,
+    "ic": 6.01,
+    "width": 21,
+    "consensus": "gaccgggCCGagcgtccgact",
+    "best_corr": 0.961,
+    "matched": true,
+    "top3": [
+      [
+        "WAR1",
+        "YML076C_325",
+        0.961
+      ],
+      [
+        "RSC30",
+        "YHR056C_2164",
+        0.921
+      ],
+      [
+        "YLL054C_half",
+        "YLL054C_2242",
+        0.917
+      ]
+    ]
+  },
+  {
+    "group": "pos_patterns",
+    "pattern": "pattern_1",
+    "n_seqlets": 129,
+    "ic": 7.82,
+    "width": 21,
+    "consensus": "atattgctgCGCGtcttccct",
+    "best_corr": 0.983,
+    "matched": true,
+    "top3": [
+      [
+        "RSC3",
+        "YDR303C_580",
+        0.983
+      ],
+      [
+        "MBP1",
+        "YDL056W_2138",
+        0.89
+      ],
+      [
+        "MAL63",
+        "MAL63_136",
+        0.805
+      ]
+    ]
+  },
+  {
+    "group": "pos_patterns",
+    "pattern": "pattern_2",
+    "n_seqlets": 79,
+    "ic": 10.08,
+    "width": 21,
+    "consensus": "acaacaataaaAAAAAttaaa",
+    "best_corr": 0.944,
+    "matched": true,
+    "top3": [
+      [
+        "poly-T",
+        "polyT_TTTTTT",
+        0.944
+      ],
+      [
+        "poly-A",
+        "polyA_AAAAAA",
+        0.944
+      ],
+      [
+        "DAT1",
+        "YML113W_1416",
+        0.838
+      ]
+    ]
+  },
+  {
+    "group": "pos_patterns",
+    "pattern": "pattern_3",
+    "n_seqlets": 50,
+    "ic": 7.68,
+    "width": 21,
+    "consensus": "cctacgcgCGgAAAAaaatca",
+    "best_corr": 0.927,
+    "matched": true,
+    "top3": [
+      [
+        "PDR3",
+        "YBL005W_1387",
+        0.927
+      ],
+      [
+        "poly-T",
+        "polyT_TTTTTT",
+        0.886
+      ],
+      [
+        "poly-A",
+        "polyA_AAAAAA",
+        0.886
+      ]
+    ]
+  },
+  {
+    "group": "pos_patterns",
+    "pattern": "pattern_4",
+    "n_seqlets": 44,
+    "ic": 10.79,
+    "width": 21,
+    "consensus": "tcggttgtcCGGGTAActcca",
+    "best_corr": 0.961,
+    "matched": true,
+    "top3": [
+      [
+        "YDR026C",
+        "YDR026C_696",
+        0.961
+      ],
+      [
+        "REB1",
+        "YBR049C_907",
+        0.949
+      ],
+      [
+        "STB2",
+        "YMR053C_710",
+        0.932
+      ]
+    ]
+  },
+  {
+    "group": "pos_patterns",
+    "pattern": "pattern_5",
+    "n_seqlets": 36,
+    "ic": 9.27,
+    "width": 21,
+    "consensus": "cagtccccaagAAAAagcGcg",
+    "best_corr": 0.875,
+    "matched": true,
+    "top3": [
+      [
+        "poly-T",
+        "polyT_TTTTTT",
+        0.875
+      ],
+      [
+        "poly-A",
+        "polyA_AAAAAA",
+        0.875
+      ],
+      [
+        "STB3",
+        "YDR169C_2233",
+        0.736
+      ]
+    ]
+  },
+  {
+    "group": "neg_patterns",
+    "pattern": "pattern_0",
+    "n_seqlets": 23,
+    "ic": 5.67,
+    "width": 21,
+    "consensus": "atagagcCCcatcgtagctaa",
+    "best_corr": 0.797,
+    "matched": true,
+    "top3": [
+      [
+        "ADR1",
+        "YDR216W_576",
+        0.797
+      ],
+      [
+        "MSN2",
+        "YMR037C_1380",
+        0.765
+      ],
+      [
+        "REI1",
+        "YBR267W_489",
+        0.736
+      ]
+    ]
+  },
+  {
+    "group": "neg_patterns",
+    "pattern": "pattern_1",
+    "n_seqlets": 22,
+    "ic": 5.58,
+    "width": 21,
+    "consensus": "tcaactctatgCGCGaaatcc",
+    "best_corr": 0.934,
+    "matched": true,
+    "top3": [
+      [
+        "RSC3",
+        "YDR303C_580",
+        0.934
+      ],
+      [
+        "MBP1",
+        "YDL056W_2138",
+        0.816
+      ],
+      [
+        "RSC30",
+        "YHR056C_2164",
+        0.812
+      ]
+    ]
+  },
+  {
+    "group": "neg_patterns",
+    "pattern": "pattern_2",
+    "n_seqlets": 22,
+    "ic": 7.5,
+    "width": 21,
+    "consensus": "cgcaGGTCcAgTcgagccacg",
+    "best_corr": 0.715,
+    "matched": false,
+    "top3": [
+      [
+        "HMS1",
+        "YOR032C_1498",
+        0.715
+      ],
+      [
+        "PHD1_long",
+        "YKL043W_393",
+        0.704
+      ],
+      [
+        "XBP1",
+        "YIL101C_2039",
+        0.695
+      ]
+    ]
+  },
+  {
+    "group": "neg_patterns",
+    "pattern": "pattern_3",
+    "n_seqlets": 18,
+    "ic": 8.89,
+    "width": 21,
+    "consensus": "tgagtAAGcTGcGtaAcCcTa",
+    "best_corr": 0.773,
+    "matched": true,
+    "top3": [
+      [
+        "YAP3_gap2",
+        "YHL009C_672",
+        0.773
+      ],
+      [
+        "ZAP1",
+        "YJL056C_2097",
+        0.771
+      ],
+      [
+        "GCR1",
+        "YPL075W_2071",
+        0.731
+      ]
+    ]
+  },
+  {
+    "group": "neg_patterns",
+    "pattern": "pattern_4",
+    "n_seqlets": 16,
+    "ic": 7.64,
+    "width": 21,
+    "consensus": "tcacgtCCcTtacgtcacgat",
+    "best_corr": 0.858,
+    "matched": true,
+    "top3": [
+      [
+        "YAP7_gap3",
+        "YOL028C_1414",
+        0.858
+      ],
+      [
+        "ACA1",
+        "YER045C_8",
+        0.8
+      ],
+      [
+        "CIN5",
+        "YOR028C_409",
+        0.76
+      ]
+    ]
+  }
+]

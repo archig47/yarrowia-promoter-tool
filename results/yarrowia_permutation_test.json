@@ -1,0 +1,9 @@
+{
+  "observed_max_abs_rho": 0.2559355432836061,
+  "best_window_distance_from_atg": -760,
+  "permutation_p": 0.457,
+  "n_permutations": 2000,
+  "null_95th": 0.35200072276111344,
+  "proximal_rho": -0.008294233560934885,
+  "proximal_p": 0.9414169118983824
+}
