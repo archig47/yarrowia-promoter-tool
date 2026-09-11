@@ -40,11 +40,11 @@ Next after NT: Day 5-6 active learning (D2).
 
 | ID | Deliverable | Status | Notes |
 |----|-------------|--------|-------|
-| D1 | Scaling curves | 4 of 5 models | 3 baselines + DNABERT-2 LoRA = 672 runs. Figures generated (fig1, fig2) and regenerate from results/. NT-500M stranded on unreachable GPU box. |
+| D1 | Scaling curves | COMPLETE | All 5 models x 7 n x 3 seeds x 2 splits x 4 eval sets = 840 runs. Figures regenerate from results/. |
 | D2 | Selection curves | done (negative) | 48 runs. NO strategy beats random; uncertainty is consistently worse. A chosen 300 is worth ~219 random. fig3 generated. Re-run diversity with LM embeddings when the GPU returns. |
 | D3 | Motif recovery | not started | BLOCKER: de Boer Supp. Table 2 (TF motif ground truth) is on the journal site, not GEO, and has not been downloaded. Get it before Day 7. |
 | D4 | Yarrowia transfer | not started | |
-| D4a | Transfer ladder | replicated | random->natural costs +0.094/+0.097/+0.103 Spearman for ridge/lgbm/cnn at n=100k. Consistent across architectures, so a property of the task. |
+| D4a | Transfer ladder | all 5 models | random->natural costs +0.089 to +0.105 Spearman across all model families at n=100k. Consistent, so a property of the task. DNABERT-2 has the best native score (0.813) and smallest drop. |
 
 Status values: not started / in progress / blocked / done
 
@@ -80,9 +80,7 @@ Status values: not started / in progress / blocked / done
 
 ## Blockers
 
-- **NT-500M results stranded.** GPU box unreachable from outside its LAN
-  (ssh gpu -> 192.168.1.166). Tailscale not yet installed on the laptop.
-  Everything else is committed locally and unaffected.
+None. (GPU access resolved 2026-09-11 via ZeroTier - see decision log.)
 
 ---
 
@@ -90,6 +88,10 @@ Status values: not started / in progress / blocked / done
 
 (append only, one line each: date — decision — reason)
 
+- 2026-09-11 — D1 COMPLETE, all five models, 840 runs. Primary test, mean Spearman at n=100/300/1k/3k/10k/30k/100k: ridge .422/.563/.679/.756/.806/.832/.865; lgbm .066/.327/.406/.692/.784/.824/.839; cnn .521/.639/.728/.794/.838/.868/.897; dnabert .563/.702/.771/.801/.831/.868/.902; nt .471/.540/.729/.788/.828/.859/.888.
+- 2026-09-11 — THE SECOND LM DOES NOT REPLICATE THE FIRST, and this sharpens the headline. NT-500M loses to DNABERT-2 at every n and to the from-scratch CNN at most; at n=300 it falls below k-mer ridge (0.540 vs 0.563). So the defensible claim is not 'pretraining helps' but 'pretraining CAN substitute for measurements, and which pretrained model matters more than its size' - NT is 4x larger and loses. Caveats belonging with it: NT is the 500M checkpoint not 2.5B (disk), its LoRA targets and tokenisation differ because the architecture differs, and part of the gap may be tuning budget rather than the model, exactly as with LightGBM at n=100.
+- 2026-09-11 — Measurement equivalence with all five models: DNABERT-2 on 300 measurements matches a CNN on 700, NT on 842, ridge on 1,390. On 1,000 it matches a CNN on 2,067, NT on 2,213, ridge on 4,352.
+- 2026-09-11 — GPU access RESOLVED via ZeroTier (network WOLNetwork). The old ssh config pointed at the LAN address 192.168.1.166, reachable only on his home WiFi; the ZeroTier address 192.168.194.73 works from anywhere. Tailscale was not used - ZeroTier was his choice. The NT sweep launched on 09-07 had in fact completed successfully (42 runs, 21,798s) and survived; nothing was lost.
 - 2026-09-11 — D2 RESULT IS NEGATIVE and that is the finding: no selection strategy beats random at any budget. Mean Spearman (3 seeds, primary test): random 0.417/0.557/0.676/0.748 at budgets 100/300/1k/3k; uncertainty 0.417/0.517/0.639/0.735; diversity 0.407/0.551/0.667/0.751; hybrid 0.417/0.538/0.656/0.732. Inverting PLAN.md's framing: a chosen 300 is worth ~219 random measurements under uncertainty sampling - actively worse than not choosing. At budget 100 the whole budget is the seed set, so uncertainty and hybrid ARE random draws by construction, hence identical.
 - 2026-09-11 — Mechanism for D2, evidenced not assumed: uncertainty sampling introduces SAMPLING BIAS. At budget 1,000 it selects sequences with mean label 10.30 against a pool mean of 9.51, and 23.1% from the extreme deciles against 20% baseline. Training on a distribution that does not match the test distribution costs more than the information gained. (An earlier prediction that label-noise chasing would be the mechanism is only weakly supported - the extreme-decile skew is modest; the mean shift is the clearer signal.) Diversity's near-tie with random is separately explained by the MMseqs2 result: 99.84% singletons means a random library has no under-sampled regions for diversity sampling to find.
 - 2026-09-11 — D2 CAVEATS for the write-up: (a) diversity clustered k-mer features, not LM embeddings as PLAN.md specifies, because the GPU box is unreachable - re-run when recovered; (b) selection is one-shot, not iterative (iterative is Checkpoint 2 item C); (c) ridge is the workhorse so that differences reflect selection rather than training noise; (d) seed spreads overlap, so only uncertainty's deficit at budgets 300 and 1,000 is clearly separated; (e) this is a RANDOM library - a structured natural promoter set such as Yarrowia may behave differently, and that limits how far the negative result generalises.
