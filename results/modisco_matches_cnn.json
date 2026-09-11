@@ -1,0 +1,164 @@
+[
+  {
+    "group": "pos_patterns",
+    "pattern": "pattern_0",
+    "n_seqlets": 354,
+    "ic": 5.55,
+    "width": 21,
+    "consensus": "gcgttgtCCGcgccgccaaca",
+    "best_corr": 0.948,
+    "matched": true,
+    "top3": [
+      [
+        "RSC30",
+        "YHR056C_2164",
+        0.948
+      ],
+      [
+        "RSC3",
+        "YDR303C_580",
+        0.898
+      ],
+      [
+        "WAR1",
+        "YML076C_325",
+        0.882
+      ]
+    ]
+  },
+  {
+    "group": "pos_patterns",
+    "pattern": "pattern_1",
+    "n_seqlets": 71,
+    "ic": 10.38,
+    "width": 21,
+    "consensus": "aaacataaaAAAAAttacaga",
+    "best_corr": 0.938,
+    "matched": true,
+    "top3": [
+      [
+        "poly-T",
+        "polyT_TTTTTT",
+        0.938
+      ],
+      [
+        "poly-A",
+        "polyA_AAAAAA",
+        0.938
+      ],
+      [
+        "STB3",
+        "YDR169C_2233",
+        0.791
+      ]
+    ]
+  },
+  {
+    "group": "pos_patterns",
+    "pattern": "pattern_2",
+    "n_seqlets": 50,
+    "ic": 7.86,
+    "width": 21,
+    "consensus": "acacgCGggaAAAatctgatc",
+    "best_corr": 0.933,
+    "matched": true,
+    "top3": [
+      [
+        "RSC3",
+        "YDR303C_580",
+        0.933
+      ],
+      [
+        "poly-T",
+        "polyT_TTTTTT",
+        0.846
+      ],
+      [
+        "poly-A",
+        "polyA_AAAAAA",
+        0.846
+      ]
+    ]
+  },
+  {
+    "group": "pos_patterns",
+    "pattern": "pattern_3",
+    "n_seqlets": 29,
+    "ic": 10.16,
+    "width": 21,
+    "consensus": "atccgcacaAAAAttCCgcgg",
+    "best_corr": 0.883,
+    "matched": true,
+    "top3": [
+      [
+        "poly-T",
+        "polyT_TTTTTT",
+        0.883
+      ],
+      [
+        "poly-A",
+        "polyA_AAAAAA",
+        0.883
+      ],
+      [
+        "PDR3",
+        "YBL005W_1387",
+        0.736
+      ]
+    ]
+  },
+  {
+    "group": "neg_patterns",
+    "pattern": "pattern_0",
+    "n_seqlets": 28,
+    "ic": 6.01,
+    "width": 21,
+    "consensus": "ctaCGctattgctaaacgcgc",
+    "best_corr": 0.854,
+    "matched": true,
+    "top3": [
+      [
+        "STP3",
+        "YLR375W_568",
+        0.854
+      ],
+      [
+        "STP4",
+        "YDL048C_559",
+        0.843
+      ],
+      [
+        "RSC3",
+        "YDR303C_580",
+        0.837
+      ]
+    ]
+  },
+  {
+    "group": "pos_patterns",
+    "pattern": "pattern_4",
+    "n_seqlets": 27,
+    "ic": 9.94,
+    "width": 21,
+    "consensus": "acctccCcGAAAAttacaaca",
+    "best_corr": 0.792,
+    "matched": true,
+    "top3": [
+      [
+        "YLL054C",
+        "YLL054C_816",
+        0.792
+      ],
+      [
+        "HAL9",
+        "YOL089C_799",
+        0.775
+      ],
+      [
+        "SPT23",
+        "YKL020C_670",
+        0.764
+      ]
+    ]
+  }
+]
