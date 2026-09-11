@@ -40,9 +40,9 @@ Next after NT: Day 5-6 active learning (D2).
 
 | ID | Deliverable | Status | Notes |
 |----|-------------|--------|-------|
-| D1 | Scaling curves | 4 of 5 models | 3 baselines + DNABERT-2 LoRA = 672 runs. NT-500M running. Figure not yet generated. |
-| D2 | Selection curves | not started | |
-| D3 | Motif recovery | not started | |
+| D1 | Scaling curves | 4 of 5 models | 3 baselines + DNABERT-2 LoRA = 672 runs. Figures generated (fig1, fig2) and regenerate from results/. NT-500M stranded on unreachable GPU box. |
+| D2 | Selection curves | not started | Not GPU-blocked - uncertainty/diversity sampling runs on the existing CPU models. Can start before NT is recovered. |
+| D3 | Motif recovery | not started | BLOCKER: de Boer Supp. Table 2 (TF motif ground truth) is on the journal site, not GEO, and has not been downloaded. Get it before Day 7. |
 | D4 | Yarrowia transfer | not started | |
 | D4a | Transfer ladder | replicated | random->natural costs +0.094/+0.097/+0.103 Spearman for ridge/lgbm/cnn at n=100k. Consistent across architectures, so a property of the task. |
 
@@ -55,7 +55,7 @@ Status values: not started / in progress / blocked / done
 - [x] evaluate.py FROZEN 2026-09-04 (Day 1) — sha256 a5ed94c66327340c...
       Any change to this file invalidates every number produced before it.
 - [x] High-quality test set secured — exactly 9,982 rows, no fallback needed
-- [ ] Three seeds below n = 10,000
+- [x] Three seeds below n = 10,000 — in fact 3 seeds at every n, both splits
 - [x] PREDICTIONS.md written before any modelling
 - [ ] Baselines reported honestly in README first paragraph
 - [ ] Limitations section written
