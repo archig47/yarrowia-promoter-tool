@@ -3,8 +3,9 @@
 Living handoff document. Update at the end of every working session.
 Keep it under one page — status board, not a log.
 
-**Last updated:** 2026-09-04 (Day 1)
-**Day:** 4 of 14 in progress (Days 1-3 done; Days 1-2 were finished early on Day 1)
+**Last updated:** 2026-09-11
+**Day:** 4 of 14 in progress. Days 1-3 complete (Days 1-2 were finished early, both on Day 1).
+**Calendar:** started 2026-09-04; today 2026-09-11.
 **Checkpoint:** 1
 
 ---
@@ -19,8 +20,19 @@ Days 1-2 data+harness work COMPLETE on Day 1. Parsed 31.3M train rows to Parquet
 found and excluded 6,651 train/test overlaps; clustered the 200k working pool
 (99.84% singletons - cluster split is degenerate for a random library, as expected);
 froze both splits and 21 subsample index sets per split; wrote and froze evaluate.py.
-Day 3 baselines complete. Next: Day 4 LoRA fine-tunes (DNABERT-2, Nucleotide Transformer)
-on the RTX 5090 over SSH. Bar to beat: CNN 0.897 at n=100,000 and 0.521 at n=100.
+Day 4 mostly done. Four of five models complete and committed (672 runs): ridge,
+LightGBM, CNN, DNABERT-2. Headline result established - genomic pretraining
+substitutes for measurements in the scarce regime, worth ~2x fewer measurements
+than a from-scratch CNN and ~4x fewer than k-mer ridge. Figures regenerate from
+results/runs.csv.
+
+BLOCKED: the NT-500M sweep was launched on the GPU box on 2026-09-07 and the
+machine is no longer reachable - ssh gpu points at 192.168.1.166, which resolves
+only on that local network, and Tailscale is not installed on the laptop. Its
+results (if the run survived) are in ~/yeast-promoter-lm/results/runs.csv on that
+box. Recover by rejoining that network, or install Tailscale for permanent access.
+
+Next after NT: Day 5-6 active learning (D2).
 
 ---
 
@@ -68,13 +80,17 @@ Status values: not started / in progress / blocked / done
 
 ## Blockers
 
-None yet.
+- **NT-500M results stranded.** GPU box unreachable from outside its LAN
+  (ssh gpu -> 192.168.1.166). Tailscale not yet installed on the laptop.
+  Everything else is committed locally and unaffected.
 
 ---
 
 ## Decision log
 
 (append only, one line each: date — decision — reason)
+
+- 2026-09-11 — Schedule: days are treated as a work timeline, not calendar days, and NOTHING is cut. Plan-day 4 of 14 reached on calendar day 8, but Days 1-2 were both finished on calendar day 1 and the intent is to keep working above one plan-day per day. PLAN.md's cut rules stay on the books but are deliberately not invoked. Flagged by the assistant, decided by Archita.
 
 - 2026-09-04 — Read-count filter dropped as impossible, not skipped — de Boer published no per-sequence read counts in either distributed file. Training data used unfiltered; the provided atLeast100Counts file (>=100 reads) is the test set. The authors' ~24% noise estimate quantifies precisely this. Method comparisons unaffected; absolute data-efficiency numbers are pessimistic. Must appear in Limitations.
 - 2026-09-04 — Label description corrected in PLAN.md and CLAUDE.md: values are expression level (18-bin weighted average, ~1.5-16.7), not log2(YFP/RFP). Spearman unaffected; affects Pearson/R^2 interpretation and MSE scaling. Training labels integer, test labels continuous.
@@ -110,7 +126,12 @@ None yet.
 
 ## Schedule slip
 
-**Days used vs planned:** 1 / 1
-**Cut so far:** none
+**Plan days completed:** 4 of 14 (Day 4 partially - NT outstanding)
+**Calendar days elapsed:** 8 (2026-09-04 to 2026-09-11)
+**Cut so far:** none, and none planned.
 
-Cut order if behind: D4 (Yarrowia) first. Never cut seeds, baselines, or write-up.
+Work is deliberately front-loaded rather than paced one plan-day per calendar day:
+Days 1-2 were both completed on calendar day 1, and Day 3 the same day. The cut
+rules below are therefore NOT being invoked - decision taken 2026-09-11, see log.
+
+Cut order if that changes: D4 (Yarrowia) first. Never cut seeds, baselines, or write-up.
