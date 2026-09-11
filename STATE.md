@@ -57,9 +57,9 @@ Status values: not started / in progress / blocked / done
 - [x] High-quality test set secured — exactly 9,982 rows, no fallback needed
 - [x] Three seeds below n = 10,000 — in fact 3 seeds at every n, both splits
 - [x] PREDICTIONS.md written before any modelling
-- [ ] Baselines reported honestly in README first paragraph
-- [ ] Limitations section written
-- [ ] One-command reproduction works from clean clone
+- [x] Baselines reported honestly in README first paragraph — CNN beats DNABERT-2 at n=10k/30k and beats NT almost everywhere; NT falls below ridge at n=300
+- [x] Limitations section written — 12 items in README.md
+- [x] One-command reproduction works from clean clone — `make all` builds venv and regenerates all figures from the committed 840 runs
 - [ ] v1.0 tagged
 
 ---
