@@ -159,7 +159,49 @@ def fig3():
     print("wrote fig3_selection_curves.png/.pdf")
 
 
+def fig4():
+    """D4: cross-species transfer. The within-species advantage reverses."""
+    import json
+    f1 = ROOT / "results" / "transfer_methods.json"
+    f2 = ROOT / "results" / "transfer_dnabert.json"
+    if not (f1.exists() and f2.exists()):
+        print("no transfer results - skipping fig4"); return
+    a, b = json.load(open(f1)), json.load(open(f2))
+    ks = [50, 100, 300, 1000, 3000]
+    series = [
+        ("ridge, 80bp window",  a["scratch80"],  "#6B2D8B", "--"),
+        ("ridge, 250bp window", a["scratch250"], "#6B2D8B", "-"),
+        ("DNABERT-2 (LoRA)",    b["direct"],     "#D1495B", "-"),
+        ("DNABERT-2 via S. cerevisiae", b["two_stage"], "#D1495B", "--"),
+    ]
+    fig, ax = plt.subplots(figsize=(6.2, 4.3))
+    for lab, m, c, ls in series:
+        xs = [k for k in ks if str(k) in m]
+        mu = [m[str(k)]["mean"] for k in xs]
+        sd = [m[str(k)]["sd"] for k in xs]
+        ax.errorbar(xs, mu, yerr=sd, color=c, ls=ls, lw=1.7, marker="o", ms=4.2,
+                    capsize=2.5, elinewidth=1, label=lab)
+    zs = b["two_stage_zeroshot"]["0"]["mean"]
+    ax.axhline(zs, color="#D1495B", lw=0.9, ls=(0, (1, 3)))
+    ax.text(3100, zs + 0.006, f"DNABERT-2 zero-shot {zs:+.3f}", ha="right",
+            fontsize=7.5, color="#D1495B")
+    ax.axhline(0, color="#999999", lw=0.8)
+    ax.set_xscale("log")
+    ax.set_xlabel("Yarrowia promoters used for training ($k$)")
+    ax.set_ylabel("Spearman $\\rho$  (held-out Yarrowia)")
+    ax.set_xticks(ks); ax.set_xticklabels(["50", "100", "300", "1k", "3k"])
+    ax.grid(axis="y", color="#E6E6E6", lw=0.6, zorder=0); ax.set_axisbelow(True)
+    ax.legend(fontsize=8, loc="upper left")
+    ax.set_title("Across species, pretraining's advantage reverses",
+                 fontsize=10, loc="left", pad=10)
+    fig.tight_layout()
+    fig.savefig(FIG / "fig4_cross_species_transfer.png", bbox_inches="tight")
+    fig.savefig(FIG / "fig4_cross_species_transfer.pdf", bbox_inches="tight")
+    plt.close(fig)
+    print("wrote fig4_cross_species_transfer.png/.pdf")
+
+
 if __name__ == "__main__":
     df = load()
     print("models present:", sorted(df.cfg_model.unique()))
-    fig1(df); fig2(df); fig3()
+    fig1(df); fig2(df); fig3(); fig4()
