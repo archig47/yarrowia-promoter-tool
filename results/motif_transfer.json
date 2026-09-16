@@ -1,0 +1,1703 @@
+[
+  {
+    "motif": "YIL056W_2091",
+    "name": "VHR1",
+    "ic": 12.74,
+    "rho_scer": 0.0051,
+    "rho_yarrowia": 0.0238
+  },
+  {
+    "motif": "YHL027W_600",
+    "name": "RIM101",
+    "ic": 12.05,
+    "rho_scer": -0.0125,
+    "rho_yarrowia": -0.0134
+  },
+  {
+    "motif": "YJR127C_575",
+    "name": "RSF2",
+    "ic": 10.41,
+    "rho_scer": 0.2429,
+    "rho_yarrowia": 0.0778
+  },
+  {
+    "motif": "YMR280C_33",
+    "name": "CAT8",
+    "ic": 7.18,
+    "rho_scer": 0.3659,
+    "rho_yarrowia": 0.051
+  },
+  {
+    "motif": "YDR081C_1050",
+    "name": "PDC2",
+    "ic": 17.49,
+    "rho_scer": -0.2791,
+    "rho_yarrowia": -0.0134
+  },
+  {
+    "motif": "YPR196W_861",
+    "name": "YPR196W",
+    "ic": 10.14,
+    "rho_scer": -0.0572,
+    "rho_yarrowia": 0.0368
+  },
+  {
+    "motif": "YPR104C_2203",
+    "name": "FHL1",
+    "ic": 4.2,
+    "rho_scer": 0.1466,
+    "rho_yarrowia": 0.0234
+  },
+  {
+    "motif": "YOR140W_839",
+    "name": "SFL1_half",
+    "ic": 10.91,
+    "rho_scer": -0.2582,
+    "rho_yarrowia": -0.0154
+  },
+  {
+    "motif": "YER161C_1114",
+    "name": "SPT2",
+    "ic": 11.32,
+    "rho_scer": -0.2334,
+    "rho_yarrowia": -0.018
+  },
+  {
+    "motif": "YOR113W_499",
+    "name": "AZF1",
+    "ic": 11.54,
+    "rho_scer": -0.0808,
+    "rho_yarrowia": 0.0245
+  },
+  {
+    "motif": "YKR034W_1355",
+    "name": "DAL80",
+    "ic": 7.75,
+    "rho_scer": -0.0988,
+    "rho_yarrowia": -0.0698
+  },
+  {
+    "motif": "YKL109W_695",
+    "name": "HAP4",
+    "ic": 11.38,
+    "rho_scer": -0.2011,
+    "rho_yarrowia": 0.0666
+  },
+  {
+    "motif": "YER028C_2144",
+    "name": "MIG3",
+    "ic": 5.56,
+    "rho_scer": 0.2799,
+    "rho_yarrowia": 0.0836
+  },
+  {
+    "motif": "YAL051W_2060",
+    "name": "OAF1",
+    "ic": 6.74,
+    "rho_scer": 0.4552,
+    "rho_yarrowia": 0.0392
+  },
+  {
+    "motif": "YIR013C_565",
+    "name": "GAT4",
+    "ic": 9.27,
+    "rho_scer": -0.1216,
+    "rho_yarrowia": -0.1054
+  },
+  {
+    "motif": "YGL209W_2143",
+    "name": "MIG2",
+    "ic": 6.86,
+    "rho_scer": 0.2749,
+    "rho_yarrowia": 0.0788
+  },
+  {
+    "motif": "YDR043C_2148",
+    "name": "NRG1",
+    "ic": 6.59,
+    "rho_scer": 0.1123,
+    "rho_yarrowia": 0.0462
+  },
+  {
+    "motif": "YDR034C_133",
+    "name": "LYS14",
+    "ic": 17.93,
+    "rho_scer": -0.0676,
+    "rho_yarrowia": 0.0085
+  },
+  {
+    "motif": "YLR098C_2120",
+    "name": "CHA4",
+    "ic": 4.97,
+    "rho_scer": 0.3694,
+    "rho_yarrowia": 0.0258
+  },
+  {
+    "motif": "YER064C_2094",
+    "name": "YER064C",
+    "ic": 14.62,
+    "rho_scer": -0.1222,
+    "rho_yarrowia": 0.0133
+  },
+  {
+    "motif": "YHR084W_400",
+    "name": "STE12",
+    "ic": 8.1,
+    "rho_scer": -0.1237,
+    "rho_yarrowia": -0.0439
+  },
+  {
+    "motif": "YDR253C_2140",
+    "name": "MET32",
+    "ic": 6.8,
+    "rho_scer": 0.171,
+    "rho_yarrowia": 0.0744
+  },
+  {
+    "motif": "YER148W_798",
+    "name": "SPT15",
+    "ic": 14.64,
+    "rho_scer": -0.2807,
+    "rho_yarrowia": -0.032
+  },
+  {
+    "motif": "YBR089C-A_792",
+    "name": "NHP6B",
+    "ic": 8.06,
+    "rho_scer": -0.3396,
+    "rho_yarrowia": -0.0279
+  },
+  {
+    "motif": "YIR023W_53",
+    "name": "DAL81",
+    "ic": 18.07,
+    "rho_scer": 0.3777,
+    "rho_yarrowia": 0.0215
+  },
+  {
+    "motif": "YEL009C_1363",
+    "name": "GCN4",
+    "ic": 11.38,
+    "rho_scer": -0.1099,
+    "rho_yarrowia": 0.0138
+  },
+  {
+    "motif": "YOL116W_1376",
+    "name": "MSN1_AT2",
+    "ic": 8.64,
+    "rho_scer": -0.0842,
+    "rho_yarrowia": 0.0028
+  },
+  {
+    "motif": "YDL020C_1700",
+    "name": "RPN4",
+    "ic": 12.55,
+    "rho_scer": 0.087,
+    "rho_yarrowia": 0.0836
+  },
+  {
+    "motif": "YMR042W_1483",
+    "name": "ARG80",
+    "ic": 5.97,
+    "rho_scer": 0.2017,
+    "rho_yarrowia": 0.0255
+  },
+  {
+    "motif": "YCR106W_506",
+    "name": "RDS1",
+    "ic": 9.75,
+    "rho_scer": 0.4701,
+    "rho_yarrowia": 0.0572
+  },
+  {
+    "motif": "YDR477W_1110",
+    "name": "SNF1",
+    "ic": 9.14,
+    "rho_scer": -0.1343,
+    "rho_yarrowia": -0.0068
+  },
+  {
+    "motif": "YPR015C_871",
+    "name": "YPR015C",
+    "ic": 16.62,
+    "rho_scer": -0.1737,
+    "rho_yarrowia": -0.0274
+  },
+  {
+    "motif": "YDR463W_660",
+    "name": "STP1",
+    "ic": 9.87,
+    "rho_scer": 0.2573,
+    "rho_yarrowia": -0.0166
+  },
+  {
+    "motif": "YOR344C_397",
+    "name": "TYE7",
+    "ic": 10.72,
+    "rho_scer": 0.0485,
+    "rho_yarrowia": 0.0456
+  },
+  {
+    "motif": "YGR044C_273",
+    "name": "RME1",
+    "ic": 18.26,
+    "rho_scer": -0.1135,
+    "rho_yarrowia": 0.0076
+  },
+  {
+    "motif": "YMR053C_710",
+    "name": "STB2",
+    "ic": 10.71,
+    "rho_scer": 0.2414,
+    "rho_yarrowia": 0.0507
+  },
+  {
+    "motif": "YLR176C_496",
+    "name": "RFX1",
+    "ic": 11.32,
+    "rho_scer": -0.0309,
+    "rho_yarrowia": 0.0606
+  },
+  {
+    "motif": "YJL089W_2067",
+    "name": "SIP4",
+    "ic": 9.78,
+    "rho_scer": 0.2914,
+    "rho_yarrowia": 0.0226
+  },
+  {
+    "motif": "YGL073W_615",
+    "name": "HSF1_tri",
+    "ic": 14.69,
+    "rho_scer": -0.1479,
+    "rho_yarrowia": -0.064
+  },
+  {
+    "motif": "YER051W_662",
+    "name": "JHD1",
+    "ic": 10.38,
+    "rho_scer": -0.2158,
+    "rho_yarrowia": 0.0016
+  },
+  {
+    "motif": "YNR063W_804",
+    "name": "YNR063W",
+    "ic": 12.96,
+    "rho_scer": 0.1838,
+    "rho_yarrowia": -0.0152
+  },
+  {
+    "motif": "YMR043W_831",
+    "name": "MCM1",
+    "ic": 10.66,
+    "rho_scer": -0.1525,
+    "rho_yarrowia": 0.0107
+  },
+  {
+    "motif": "YFL021W_962",
+    "name": "GAT1",
+    "ic": 10.13,
+    "rho_scer": -0.2758,
+    "rho_yarrowia": -0.0376
+  },
+  {
+    "motif": "YOL028C_1737",
+    "name": "YAP7_gap2",
+    "ic": 11.86,
+    "rho_scer": -0.1911,
+    "rho_yarrowia": -0.0011
+  },
+  {
+    "motif": "YMR016C_404",
+    "name": "SOK2",
+    "ic": 6.53,
+    "rho_scer": 0.0952,
+    "rho_yarrowia": -0.0309
+  },
+  {
+    "motif": "YKR099W_402",
+    "name": "BAS1",
+    "ic": 10.44,
+    "rho_scer": -0.0829,
+    "rho_yarrowia": -0.0038
+  },
+  {
+    "motif": "YLR451W_781",
+    "name": "LEU3",
+    "ic": 7.66,
+    "rho_scer": 0.3179,
+    "rho_yarrowia": 0.0082
+  },
+  {
+    "motif": "YNL068C_830",
+    "name": "FKH2",
+    "ic": 14.82,
+    "rho_scer": -0.2404,
+    "rho_yarrowia": -0.0282
+  },
+  {
+    "motif": "YHL009C_1411",
+    "name": "YAP3_gap3",
+    "ic": 11.5,
+    "rho_scer": -0.2131,
+    "rho_yarrowia": 0.0059
+  },
+  {
+    "motif": "YPL089C_419",
+    "name": "RLM1",
+    "ic": 12.12,
+    "rho_scer": -0.2393,
+    "rho_yarrowia": 0.0132
+  },
+  {
+    "motif": "YDR213W_544",
+    "name": "UPC2",
+    "ic": 8.61,
+    "rho_scer": -0.0193,
+    "rho_yarrowia": -0.0623
+  },
+  {
+    "motif": "YBL103C_1446",
+    "name": "RTG3_GGTCAC",
+    "ic": 5.69,
+    "rho_scer": 0.2262,
+    "rho_yarrowia": 0.0668
+  },
+  {
+    "motif": "YPR054W_1875",
+    "name": "SMK1",
+    "ic": 17.32,
+    "rho_scer": -0.0933,
+    "rho_yarrowia": 0.0163
+  },
+  {
+    "motif": "YPL075W_2071",
+    "name": "GCR1",
+    "ic": 9.5,
+    "rho_scer": 0.0437,
+    "rho_yarrowia": 0.0161
+  },
+  {
+    "motif": "YNL139C_786",
+    "name": "THO2",
+    "ic": 14.73,
+    "rho_scer": -0.2531,
+    "rho_yarrowia": -0.0191
+  },
+  {
+    "motif": "YER109C_67",
+    "name": "FLO8",
+    "ic": 10.0,
+    "rho_scer": -0.0247,
+    "rho_yarrowia": 0.0536
+  },
+  {
+    "motif": "YKL038W_2227",
+    "name": "RGT1",
+    "ic": 8.39,
+    "rho_scer": 0.0694,
+    "rho_yarrowia": 0.0165
+  },
+  {
+    "motif": "YDL002C_502",
+    "name": "NHP10",
+    "ic": 11.92,
+    "rho_scer": 0.3929,
+    "rho_yarrowia": 0.0521
+  },
+  {
+    "motif": "YCR065W_570",
+    "name": "HCM1",
+    "ic": 8.9,
+    "rho_scer": -0.1759,
+    "rho_yarrowia": 0.0108
+  },
+  {
+    "motif": "YGL073W_411",
+    "name": "HSF1_di2",
+    "ic": 9.15,
+    "rho_scer": -0.1594,
+    "rho_yarrowia": -0.0463
+  },
+  {
+    "motif": "YBR240C_1449",
+    "name": "THI2",
+    "ic": 5.84,
+    "rho_scer": 0.3435,
+    "rho_yarrowia": -0.0024
+  },
+  {
+    "motif": "YFR034C_2222",
+    "name": "PHO4",
+    "ic": 7.23,
+    "rho_scer": 0.1963,
+    "rho_yarrowia": 0.0472
+  },
+  {
+    "motif": "YBL103C_1445",
+    "name": "RTG3_GAGTCA",
+    "ic": 7.51,
+    "rho_scer": -0.0538,
+    "rho_yarrowia": 0.0148
+  },
+  {
+    "motif": "YCR096C_558",
+    "name": "HMRA2",
+    "ic": 10.73,
+    "rho_scer": -0.186,
+    "rho_yarrowia": -0.0087
+  },
+  {
+    "motif": "YPL139C_1143",
+    "name": "UME1",
+    "ic": 11.48,
+    "rho_scer": -0.2276,
+    "rho_yarrowia": -0.0368
+  },
+  {
+    "motif": "YDR421W_1509",
+    "name": "ARO80_di",
+    "ic": 7.93,
+    "rho_scer": 0.2734,
+    "rho_yarrowia": -0.0116
+  },
+  {
+    "motif": "YPR052C_879",
+    "name": "NHP6A",
+    "ic": 10.2,
+    "rho_scer": -0.3392,
+    "rho_yarrowia": -0.0204
+  },
+  {
+    "motif": "YDR423C_2098",
+    "name": "CAD1_gap3",
+    "ic": 10.34,
+    "rho_scer": -0.1968,
+    "rho_yarrowia": -0.0265
+  },
+  {
+    "motif": "YLR013W_2128",
+    "name": "GAT3",
+    "ic": 7.18,
+    "rho_scer": -0.157,
+    "rho_yarrowia": -0.0913
+  },
+  {
+    "motif": "YGR067C_2191",
+    "name": "YGR067C",
+    "ic": 5.26,
+    "rho_scer": 0.2394,
+    "rho_yarrowia": 0.0876
+  },
+  {
+    "motif": "YNL167C_1401",
+    "name": "SKO1",
+    "ic": 7.44,
+    "rho_scer": -0.0572,
+    "rho_yarrowia": 0.0094
+  },
+  {
+    "motif": "YGL192W_1000",
+    "name": "IME4",
+    "ic": 9.58,
+    "rho_scer": -0.2408,
+    "rho_yarrowia": -0.0244
+  },
+  {
+    "motif": "YMR070W_2080",
+    "name": "MOT3",
+    "ic": 12.06,
+    "rho_scer": 0.0241,
+    "rho_yarrowia": 0.01
+  },
+  {
+    "motif": "YGL096W_494",
+    "name": "TOS8",
+    "ic": 10.3,
+    "rho_scer": -0.0773,
+    "rho_yarrowia": -0.0163
+  },
+  {
+    "motif": "TBP-TFIIB_1329",
+    "name": "TBP-TFIIB",
+    "ic": 35.11,
+    "rho_scer": -0.0673,
+    "rho_yarrowia": 0.008
+  },
+  {
+    "motif": "YJL103C_856",
+    "name": "GSM1",
+    "ic": 13.28,
+    "rho_scer": 0.2032,
+    "rho_yarrowia": 0.0239
+  },
+  {
+    "motif": "YIR018W_777",
+    "name": "YAP5",
+    "ic": 12.19,
+    "rho_scer": -0.3213,
+    "rho_yarrowia": -0.0315
+  },
+  {
+    "motif": "YBL054W_852",
+    "name": "TOD6",
+    "ic": 13.85,
+    "rho_scer": 0.0358,
+    "rho_yarrowia": -0.0182
+  },
+  {
+    "motif": "YHR178W_1405",
+    "name": "STB5",
+    "ic": 6.91,
+    "rho_scer": 0.2986,
+    "rho_yarrowia": 0.0204
+  },
+  {
+    "motif": "YOR172W_813",
+    "name": "YRM1",
+    "ic": 9.76,
+    "rho_scer": 0.0389,
+    "rho_yarrowia": 0.0112
+  },
+  {
+    "motif": "YPL128C_2178",
+    "name": "TBF1",
+    "ic": 8.32,
+    "rho_scer": -0.0134,
+    "rho_yarrowia": 0.1117
+  },
+  {
+    "motif": "YJR060W_1346",
+    "name": "CBF1",
+    "ic": 6.07,
+    "rho_scer": 0.0647,
+    "rho_yarrowia": 0.0397
+  },
+  {
+    "motif": "YPL133C_757",
+    "name": "RDS2",
+    "ic": 18.41,
+    "rho_scer": 0.1233,
+    "rho_yarrowia": 0.0292
+  },
+  {
+    "motif": "YDL170W_486",
+    "name": "UGA3_med",
+    "ic": 10.97,
+    "rho_scer": 0.4238,
+    "rho_yarrowia": 0.0401
+  },
+  {
+    "motif": "YKL015W_2065",
+    "name": "PUT3",
+    "ic": 8.96,
+    "rho_scer": 0.388,
+    "rho_yarrowia": 0.0709
+  },
+  {
+    "motif": "YJL056C_2097",
+    "name": "ZAP1",
+    "ic": 15.43,
+    "rho_scer": 0.0295,
+    "rho_yarrowia": 0.0427
+  },
+  {
+    "motif": "YPL202C_389",
+    "name": "AFT2",
+    "ic": 6.51,
+    "rho_scer": 0.2044,
+    "rho_yarrowia": 0.0678
+  },
+  {
+    "motif": "YER040W_539",
+    "name": "GLN3",
+    "ic": 7.81,
+    "rho_scer": -0.1758,
+    "rho_yarrowia": -0.0562
+  },
+  {
+    "motif": "YLR014C_2064",
+    "name": "PPR1",
+    "ic": 12.88,
+    "rho_scer": 0.2519,
+    "rho_yarrowia": 0.0054
+  },
+  {
+    "motif": "YJR147W_992",
+    "name": "HMS2",
+    "ic": 16.78,
+    "rho_scer": -0.1275,
+    "rho_yarrowia": -0.0123
+  },
+  {
+    "motif": "YDL056W_2138",
+    "name": "MBP1",
+    "ic": 5.7,
+    "rho_scer": 0.2902,
+    "rho_yarrowia": 0.0033
+  },
+  {
+    "motif": "YLR375W_568",
+    "name": "STP3",
+    "ic": 10.98,
+    "rho_scer": 0.1249,
+    "rho_yarrowia": 0.0048
+  },
+  {
+    "motif": "YPR199C_603",
+    "name": "ARR1",
+    "ic": 9.05,
+    "rho_scer": -0.2508,
+    "rho_yarrowia": -0.0234
+  },
+  {
+    "motif": "YLR256W_2078",
+    "name": "HAP1",
+    "ic": 17.06,
+    "rho_scer": 0.2519,
+    "rho_yarrowia": -0.0025
+  },
+  {
+    "motif": "YMR075W_1066",
+    "name": "RCO1",
+    "ic": 7.96,
+    "rho_scer": -0.1641,
+    "rho_yarrowia": -0.0163
+  },
+  {
+    "motif": "YPR086W_1327",
+    "name": "SUA7",
+    "ic": 12.41,
+    "rho_scer": 0.2517,
+    "rho_yarrowia": 0.0705
+  },
+  {
+    "motif": "YPR022C_588",
+    "name": "YPR022C",
+    "ic": 10.77,
+    "rho_scer": 0.2006,
+    "rho_yarrowia": 0.1046
+  },
+  {
+    "motif": "YLL054C_526",
+    "name": "YLL054C_halfX",
+    "ic": 8.54,
+    "rho_scer": 0.4551,
+    "rho_yarrowia": 0.0144
+  },
+  {
+    "motif": "YDR520C_553",
+    "name": "URC2",
+    "ic": 11.19,
+    "rho_scer": 0.1556,
+    "rho_yarrowia": -0.0018
+  },
+  {
+    "motif": "YIL130W_807",
+    "name": "ASG1",
+    "ic": 12.96,
+    "rho_scer": 0.4432,
+    "rho_yarrowia": 0.0084
+  },
+  {
+    "motif": "YML099C_1506",
+    "name": "ARG81",
+    "ic": 7.38,
+    "rho_scer": 0.3188,
+    "rho_yarrowia": 0.0096
+  },
+  {
+    "motif": "YMR021C_1540",
+    "name": "MAC1",
+    "ic": 13.23,
+    "rho_scer": -0.0979,
+    "rho_yarrowia": -0.0121
+  },
+  {
+    "motif": "YML007W_2186",
+    "name": "YAP1",
+    "ic": 4.64,
+    "rho_scer": -0.2393,
+    "rho_yarrowia": 0.0019
+  },
+  {
+    "motif": "YBR150C_552",
+    "name": "TBS1",
+    "ic": 9.8,
+    "rho_scer": 0.2814,
+    "rho_yarrowia": -0.0093
+  },
+  {
+    "motif": "YBR066C_1383",
+    "name": "NRG2",
+    "ic": 8.93,
+    "rho_scer": 0.1135,
+    "rho_yarrowia": 0.0541
+  },
+  {
+    "motif": "YDR174W_2249",
+    "name": "HMO1",
+    "ic": 15.99,
+    "rho_scer": 0.2707,
+    "rho_yarrowia": 0.0292
+  },
+  {
+    "motif": "YJL089W_573",
+    "name": "SIP4_half",
+    "ic": 8.69,
+    "rho_scer": 0.3367,
+    "rho_yarrowia": -0.0036
+  },
+  {
+    "motif": "YOR337W_817",
+    "name": "TEA1",
+    "ic": 21.31,
+    "rho_scer": -0.063,
+    "rho_yarrowia": 0.0078
+  },
+  {
+    "motif": "YPL230W_509",
+    "name": "USV1",
+    "ic": 9.1,
+    "rho_scer": 0.0865,
+    "rho_yarrowia": 0.0365
+  },
+  {
+    "motif": "YOR028C_409",
+    "name": "CIN5",
+    "ic": 9.21,
+    "rho_scer": -0.2544,
+    "rho_yarrowia": -0.0314
+  },
+  {
+    "motif": "YGL181W_694",
+    "name": "GTS1",
+    "ic": 9.42,
+    "rho_scer": -0.1849,
+    "rho_yarrowia": -0.0351
+  },
+  {
+    "motif": "YOL067C_1494",
+    "name": "RTG1_GTGACC",
+    "ic": 4.7,
+    "rho_scer": 0.1058,
+    "rho_yarrowia": 0.0724
+  },
+  {
+    "motif": "YGL254W_545",
+    "name": "FZF1",
+    "ic": 12.0,
+    "rho_scer": -0.1688,
+    "rho_yarrowia": -0.0225
+  },
+  {
+    "motif": "YMR019W_2107",
+    "name": "STB4",
+    "ic": 11.62,
+    "rho_scer": 0.4108,
+    "rho_yarrowia": 0.0346
+  },
+  {
+    "motif": "YER169W_547",
+    "name": "RPH1",
+    "ic": 11.73,
+    "rho_scer": 0.0326,
+    "rho_yarrowia": 0.0594
+  },
+  {
+    "motif": "YKL043W_2153",
+    "name": "PHD1",
+    "ic": 7.62,
+    "rho_scer": 0.0184,
+    "rho_yarrowia": -0.056
+  },
+  {
+    "motif": "YHR206W_380",
+    "name": "SKN7",
+    "ic": 6.41,
+    "rho_scer": 0.3901,
+    "rho_yarrowia": 0.0308
+  },
+  {
+    "motif": "YGL013C_485",
+    "name": "PDR1",
+    "ic": 10.01,
+    "rho_scer": 0.3748,
+    "rho_yarrowia": 0.0234
+  },
+  {
+    "motif": "YBL005W_2062",
+    "name": "PDR3_long",
+    "ic": 6.05,
+    "rho_scer": 0.2932,
+    "rho_yarrowia": 0.0177
+  },
+  {
+    "motif": "YMR182C_531",
+    "name": "RGM1",
+    "ic": 8.85,
+    "rho_scer": 0.0958,
+    "rho_yarrowia": 0.0427
+  },
+  {
+    "motif": "YER068W_556",
+    "name": "MOT2",
+    "ic": 9.14,
+    "rho_scer": -0.2577,
+    "rho_yarrowia": -0.0431
+  },
+  {
+    "motif": "YDR096W_562",
+    "name": "GIS1",
+    "ic": 9.99,
+    "rho_scer": -0.0003,
+    "rho_yarrowia": 0.0289
+  },
+  {
+    "motif": "YNL027W_516",
+    "name": "CRZ1",
+    "ic": 8.26,
+    "rho_scer": 0.2536,
+    "rho_yarrowia": 0.0281
+  },
+  {
+    "motif": "YGL071W_658",
+    "name": "AFT1",
+    "ic": 8.0,
+    "rho_scer": 0.1483,
+    "rho_yarrowia": 0.0386
+  },
+  {
+    "motif": "YPR009W_2236",
+    "name": "SUT2",
+    "ic": 5.42,
+    "rho_scer": 0.0242,
+    "rho_yarrowia": -0.0059
+  },
+  {
+    "motif": "MATALPHA1-MCM1-dimer_1442",
+    "name": "MATALPHA1-MCM1-dimer",
+    "ic": 32.94,
+    "rho_scer": -0.2402,
+    "rho_yarrowia": -0.0037
+  },
+  {
+    "motif": "YKL020C_670",
+    "name": "SPT23",
+    "ic": 9.7,
+    "rho_scer": -0.1403,
+    "rho_yarrowia": -0.0007
+  },
+  {
+    "motif": "YER088C_2221",
+    "name": "DOT6",
+    "ic": 7.51,
+    "rho_scer": 0.0261,
+    "rho_yarrowia": -0.0392
+  },
+  {
+    "motif": "YBR182C_864",
+    "name": "SMP1",
+    "ic": 9.3,
+    "rho_scer": -0.3241,
+    "rho_yarrowia": -0.0306
+  },
+  {
+    "motif": "YER184C_2095",
+    "name": "YER184C_long",
+    "ic": 10.48,
+    "rho_scer": 0.4095,
+    "rho_yarrowia": 0.0363
+  },
+  {
+    "motif": "YHR206W_583",
+    "name": "SKN7_half",
+    "ic": 7.83,
+    "rho_scer": 0.2823,
+    "rho_yarrowia": 0.0107
+  },
+  {
+    "motif": "YFL044C_1166",
+    "name": "OTU1",
+    "ic": 9.65,
+    "rho_scer": -0.2323,
+    "rho_yarrowia": -0.0159
+  },
+  {
+    "motif": "YDR034C_865",
+    "name": "LYS14_half",
+    "ic": 15.32,
+    "rho_scer": 0.0678,
+    "rho_yarrowia": 0.0199
+  },
+  {
+    "motif": "YGL073W_476",
+    "name": "HSF1_mono",
+    "ic": 10.18,
+    "rho_scer": -0.0618,
+    "rho_yarrowia": -0.0237
+  },
+  {
+    "motif": "YML027W_498",
+    "name": "YOX1",
+    "ic": 11.58,
+    "rho_scer": -0.2782,
+    "rho_yarrowia": 0.0046
+  },
+  {
+    "motif": "YDL048C_559",
+    "name": "STP4",
+    "ic": 11.48,
+    "rho_scer": 0.1392,
+    "rho_yarrowia": -0.0129
+  },
+  {
+    "motif": "YPR008W_1425",
+    "name": "HAA1",
+    "ic": 9.0,
+    "rho_scer": 0.3531,
+    "rho_yarrowia": 0.043
+  },
+  {
+    "motif": "YIL036W_585",
+    "name": "CST6",
+    "ic": 11.51,
+    "rho_scer": -0.1053,
+    "rho_yarrowia": 0.0006
+  },
+  {
+    "motif": "YML065W_1549",
+    "name": "ORC1",
+    "ic": 20.93,
+    "rho_scer": -0.3063,
+    "rho_yarrowia": -0.0151
+  },
+  {
+    "motif": "YDR303C_580",
+    "name": "RSC3",
+    "ic": 7.78,
+    "rho_scer": 0.5181,
+    "rho_yarrowia": -0.0208
+  },
+  {
+    "motif": "YPR013C_859",
+    "name": "CMR3",
+    "ic": 15.34,
+    "rho_scer": -0.1813,
+    "rho_yarrowia": -0.0506
+  },
+  {
+    "motif": "YKL062W_518",
+    "name": "MSN4",
+    "ic": 8.98,
+    "rho_scer": 0.1459,
+    "rho_yarrowia": 0.0577
+  },
+  {
+    "motif": "YPR186C_1321",
+    "name": "PZF1",
+    "ic": 28.0,
+    "rho_scer": 0.0369,
+    "rho_yarrowia": 0.0478
+  },
+  {
+    "motif": "YJL127C_1880",
+    "name": "SPT10",
+    "ic": 16.38,
+    "rho_scer": -0.126,
+    "rho_yarrowia": -0.0148
+  },
+  {
+    "motif": "YDL106C_2154",
+    "name": "PHO2",
+    "ic": 6.01,
+    "rho_scer": -0.2915,
+    "rho_yarrowia": -0.0234
+  },
+  {
+    "motif": "YCR040W_1418",
+    "name": "MATALPHA1",
+    "ic": 25.87,
+    "rho_scer": -0.2559,
+    "rho_yarrowia": -0.0005
+  },
+  {
+    "motif": "YKL112W_1993",
+    "name": "ABF1",
+    "ic": 11.26,
+    "rho_scer": 0.1126,
+    "rho_yarrowia": -0.0223
+  },
+  {
+    "motif": "YOL067C_1493",
+    "name": "RTG1_GAGT",
+    "ic": 5.36,
+    "rho_scer": -0.1267,
+    "rho_yarrowia": 0.0067
+  },
+  {
+    "motif": "YLR131C_1332",
+    "name": "ACE2",
+    "ic": 8.6,
+    "rho_scer": 0.1391,
+    "rho_yarrowia": 0.027
+  },
+  {
+    "motif": "MATA1-MATALPHA2-dimer_1436",
+    "name": "MATA1-MATALPHA2-dimer",
+    "ic": 19.97,
+    "rho_scer": -0.1641,
+    "rho_yarrowia": -0.0233
+  },
+  {
+    "motif": "YFL031W_1788",
+    "name": "HAC1",
+    "ic": 11.41,
+    "rho_scer": 0.0483,
+    "rho_yarrowia": 0.0337
+  },
+  {
+    "motif": "YCL067C_2102",
+    "name": "HMLALPHA2_CA",
+    "ic": 9.34,
+    "rho_scer": -0.0806,
+    "rho_yarrowia": -0.0421
+  },
+  {
+    "motif": "YMR072W_541",
+    "name": "ABF2",
+    "ic": 10.72,
+    "rho_scer": -0.1288,
+    "rho_yarrowia": -0.0367
+  },
+  {
+    "motif": "YGL035C_2142",
+    "name": "MIG1",
+    "ic": 6.22,
+    "rho_scer": 0.2255,
+    "rho_yarrowia": 0.0811
+  },
+  {
+    "motif": "YDR451C_716",
+    "name": "YHP1",
+    "ic": 7.45,
+    "rho_scer": -0.2904,
+    "rho_yarrowia": -0.0181
+  },
+  {
+    "motif": "YMR164C_204",
+    "name": "MSS11",
+    "ic": 10.0,
+    "rho_scer": -0.0247,
+    "rho_yarrowia": 0.0536
+  },
+  {
+    "motif": "YIL101C_2039",
+    "name": "XBP1",
+    "ic": 11.26,
+    "rho_scer": 0.2039,
+    "rho_yarrowia": -0.0085
+  },
+  {
+    "motif": "YMR037C_1380",
+    "name": "MSN2",
+    "ic": 5.27,
+    "rho_scer": 0.0817,
+    "rho_yarrowia": 0.0162
+  },
+  {
+    "motif": "YCL067C_2079",
+    "name": "HMLALPHA2_TT",
+    "ic": 11.65,
+    "rho_scer": -0.145,
+    "rho_yarrowia": 0.0186
+  },
+  {
+    "motif": "YBR049C_907",
+    "name": "REB1",
+    "ic": 14.52,
+    "rho_scer": 0.1029,
+    "rho_yarrowia": 0.0547
+  },
+  {
+    "motif": "YBL103C_870",
+    "name": "RTG3_pal",
+    "ic": 12.96,
+    "rho_scer": 0.1415,
+    "rho_yarrowia": 0.0537
+  },
+  {
+    "motif": "TBP-TFIIA_1328",
+    "name": "TBP-TFIIA",
+    "ic": 17.76,
+    "rho_scer": -0.0479,
+    "rho_yarrowia": -0.0304
+  },
+  {
+    "motif": "YKL043W_393",
+    "name": "PHD1_long",
+    "ic": 6.95,
+    "rho_scer": 0.3792,
+    "rho_yarrowia": -0.0024
+  },
+  {
+    "motif": "YOR230W_1148",
+    "name": "WTM1",
+    "ic": 19.67,
+    "rho_scer": -0.3447,
+    "rho_yarrowia": -0.028
+  },
+  {
+    "motif": "YGL073W_1461",
+    "name": "HSF1_di1",
+    "ic": 10.87,
+    "rho_scer": -0.1924,
+    "rho_yarrowia": -0.0334
+  },
+  {
+    "motif": "YGL131C_612",
+    "name": "SNT2",
+    "ic": 18.31,
+    "rho_scer": 0.1321,
+    "rho_yarrowia": -0.0048
+  },
+  {
+    "motif": "YBR083W_815",
+    "name": "TEC1",
+    "ic": 13.0,
+    "rho_scer": -0.0832,
+    "rho_yarrowia": -0.0075
+  },
+  {
+    "motif": "YNL314W_690",
+    "name": "DAL82",
+    "ic": 8.95,
+    "rho_scer": -0.0436,
+    "rho_yarrowia": 0.0168
+  },
+  {
+    "motif": "YKL185W_28",
+    "name": "ASH1",
+    "ic": 9.0,
+    "rho_scer": -0.1613,
+    "rho_yarrowia": -0.0417
+  },
+  {
+    "motif": "YGL162W_673",
+    "name": "SUT1",
+    "ic": 5.99,
+    "rho_scer": 0.4748,
+    "rho_yarrowia": 0.0275
+  },
+  {
+    "motif": "YPL177C_2121",
+    "name": "CUP9",
+    "ic": 7.3,
+    "rho_scer": -0.0944,
+    "rho_yarrowia": -0.0067
+  },
+  {
+    "motif": "YHR006W_2174",
+    "name": "STP2",
+    "ic": 5.39,
+    "rho_scer": 0.3297,
+    "rho_yarrowia": -0.019
+  },
+  {
+    "motif": "YLR278C_2112",
+    "name": "YLR278C",
+    "ic": 9.48,
+    "rho_scer": 0.4265,
+    "rho_yarrowia": 0.0201
+  },
+  {
+    "motif": "YOR380W_756",
+    "name": "RDR1",
+    "ic": 14.35,
+    "rho_scer": 0.2609,
+    "rho_yarrowia": 0.0032
+  },
+  {
+    "motif": "YER069W_1426",
+    "name": "ARG5,6",
+    "ic": 13.72,
+    "rho_scer": 0.1573,
+    "rho_yarrowia": 0.0058
+  },
+  {
+    "motif": "YER111C_584",
+    "name": "SWI4",
+    "ic": 11.94,
+    "rho_scer": 0.223,
+    "rho_yarrowia": -0.003
+  },
+  {
+    "motif": "TBP-TFIIA-TFIIB_1330",
+    "name": "TBP-TFIIA-TFIIB",
+    "ic": 18.93,
+    "rho_scer": -0.0509,
+    "rho_yarrowia": 0.0106
+  },
+  {
+    "motif": "YPL038W_1370",
+    "name": "MET31",
+    "ic": 7.57,
+    "rho_scer": 0.0452,
+    "rho_yarrowia": 0.0727
+  },
+  {
+    "motif": "YML113W_1416",
+    "name": "DAT1",
+    "ic": 20.0,
+    "rho_scer": -0.1947,
+    "rho_yarrowia": 0.0379
+  },
+  {
+    "motif": "YDR310C_478",
+    "name": "SUM1_AAAT",
+    "ic": 9.24,
+    "rho_scer": -0.2365,
+    "rho_yarrowia": 0.0243
+  },
+  {
+    "motif": "YER130C_534",
+    "name": "COM2",
+    "ic": 11.44,
+    "rho_scer": -0.0294,
+    "rho_yarrowia": 0.028
+  },
+  {
+    "motif": "YLR176C_1478",
+    "name": "RFX1_long",
+    "ic": 12.45,
+    "rho_scer": 0.0755,
+    "rho_yarrowia": 0.0222
+  },
+  {
+    "motif": "YOR032C_1498",
+    "name": "HMS1",
+    "ic": 5.02,
+    "rho_scer": 0.152,
+    "rho_yarrowia": 0.0392
+  },
+  {
+    "motif": "YPR065W_1396",
+    "name": "ROX1",
+    "ic": 8.57,
+    "rho_scer": -0.208,
+    "rho_yarrowia": -0.0353
+  },
+  {
+    "motif": "YER184C_512",
+    "name": "YER184C",
+    "ic": 9.26,
+    "rho_scer": 0.3959,
+    "rho_yarrowia": 0.0032
+  },
+  {
+    "motif": "YNL216W_254",
+    "name": "RAP1",
+    "ic": 12.87,
+    "rho_scer": 0.0535,
+    "rho_yarrowia": 0.1297
+  },
+  {
+    "motif": "YHL009C_672",
+    "name": "YAP3_gap2",
+    "ic": 12.05,
+    "rho_scer": -0.2452,
+    "rho_yarrowia": -0.0093
+  },
+  {
+    "motif": "YDR266C_1161",
+    "name": "YDR266C",
+    "ic": 13.29,
+    "rho_scer": -0.1232,
+    "rho_yarrowia": 0.0051
+  },
+  {
+    "motif": "YCL055W_127",
+    "name": "KAR4",
+    "ic": 17.52,
+    "rho_scer": -0.0473,
+    "rho_yarrowia": 0.0416
+  },
+  {
+    "motif": "YBR033W_2093",
+    "name": "EDS1",
+    "ic": 11.75,
+    "rho_scer": -0.0163,
+    "rho_yarrowia": 0.0258
+  },
+  {
+    "motif": "YDR423C_2073",
+    "name": "CAD1_gap2",
+    "ic": 12.59,
+    "rho_scer": -0.2617,
+    "rho_yarrowia": -0.0078
+  },
+  {
+    "motif": "YDR123C_713",
+    "name": "INO2",
+    "ic": 12.11,
+    "rho_scer": -0.0068,
+    "rho_yarrowia": -0.0009
+  },
+  {
+    "motif": "YML081W_2194",
+    "name": "YML081W",
+    "ic": 6.56,
+    "rho_scer": 0.2093,
+    "rho_yarrowia": 0.0936
+  },
+  {
+    "motif": "YCR039C_1364",
+    "name": "MATALPHA2",
+    "ic": 6.05,
+    "rho_scer": -0.0503,
+    "rho_yarrowia": 0.0038
+  },
+  {
+    "motif": "YDR259C_599",
+    "name": "YAP6",
+    "ic": 9.82,
+    "rho_scer": -0.2253,
+    "rho_yarrowia": -0.0181
+  },
+  {
+    "motif": "YOR140W_605",
+    "name": "SFL1",
+    "ic": 13.77,
+    "rho_scer": -0.0109,
+    "rho_yarrowia": -0.0023
+  },
+  {
+    "motif": "YOR028C_1349",
+    "name": "CIN5_med",
+    "ic": 8.87,
+    "rho_scer": -0.1949,
+    "rho_yarrowia": -0.0333
+  },
+  {
+    "motif": "YDR026C_696",
+    "name": "YDR026C",
+    "ic": 11.94,
+    "rho_scer": 0.2323,
+    "rho_yarrowia": 0.0469
+  },
+  {
+    "motif": "YER045C_8",
+    "name": "ACA1",
+    "ic": 14.16,
+    "rho_scer": -0.1315,
+    "rho_yarrowia": 0.0082
+  },
+  {
+    "motif": "YDR216W_576",
+    "name": "ADR1",
+    "ic": 8.44,
+    "rho_scer": 0.1888,
+    "rho_yarrowia": 0.0909
+  },
+  {
+    "motif": "YLR266C_528",
+    "name": "PDR8",
+    "ic": 12.29,
+    "rho_scer": 0.1938,
+    "rho_yarrowia": -0.036
+  },
+  {
+    "motif": "YHR178W_2068",
+    "name": "STB5_med",
+    "ic": 6.64,
+    "rho_scer": 0.4415,
+    "rho_yarrowia": 0.0284
+  },
+  {
+    "motif": "YDL170W_651",
+    "name": "UGA3",
+    "ic": 10.33,
+    "rho_scer": 0.3672,
+    "rho_yarrowia": 0.0108
+  },
+  {
+    "motif": "YMR168C_524",
+    "name": "CEP3",
+    "ic": 11.67,
+    "rho_scer": 0.2096,
+    "rho_yarrowia": -0.0118
+  },
+  {
+    "motif": "YPL248C_1510",
+    "name": "GAL4",
+    "ic": 10.56,
+    "rho_scer": 0.4309,
+    "rho_yarrowia": 0.0094
+  },
+  {
+    "motif": "YLR228C_849",
+    "name": "ECM22",
+    "ic": 13.5,
+    "rho_scer": 0.3589,
+    "rho_yarrowia": 0.0419
+  },
+  {
+    "motif": "YOL116W_1378",
+    "name": "MSN1_AT1",
+    "ic": 8.61,
+    "rho_scer": -0.1028,
+    "rho_yarrowia": -0.0131
+  },
+  {
+    "motif": "YHR124W_1464",
+    "name": "NDT80",
+    "ic": 7.9,
+    "rho_scer": -0.016,
+    "rho_yarrowia": 0.1201
+  },
+  {
+    "motif": "YCR018C_2232",
+    "name": "SRD1",
+    "ic": 6.81,
+    "rho_scer": -0.1607,
+    "rho_yarrowia": -0.0883
+  },
+  {
+    "motif": "YIL131C_2002",
+    "name": "FKH1",
+    "ic": 10.81,
+    "rho_scer": -0.1123,
+    "rho_yarrowia": -0.0216
+  },
+  {
+    "motif": "YLR403W_797",
+    "name": "SFP1",
+    "ic": 12.47,
+    "rho_scer": -0.2192,
+    "rho_yarrowia": 0.0276
+  },
+  {
+    "motif": "YOL028C_1414",
+    "name": "YAP7_gap3",
+    "ic": 9.77,
+    "rho_scer": -0.1613,
+    "rho_yarrowia": 0.0133
+  },
+  {
+    "motif": "YLR266C_244",
+    "name": "PDR8_pal",
+    "ic": 14.41,
+    "rho_scer": 0.1875,
+    "rho_yarrowia": -0.0084
+  },
+  {
+    "motif": "YFL031W_94",
+    "name": "HAC1_med",
+    "ic": 11.02,
+    "rho_scer": 0.2755,
+    "rho_yarrowia": 0.0036
+  },
+  {
+    "motif": "YPL021W_578",
+    "name": "ECM23",
+    "ic": 7.51,
+    "rho_scer": -0.1217,
+    "rho_yarrowia": -0.11
+  },
+  {
+    "motif": "YDR169C_2233",
+    "name": "STB3",
+    "ic": 8.67,
+    "rho_scer": -0.1286,
+    "rho_yarrowia": 0.0192
+  },
+  {
+    "motif": "YDR146C_569",
+    "name": "SWI5",
+    "ic": 11.39,
+    "rho_scer": 0.08,
+    "rho_yarrowia": 0.0286
+  },
+  {
+    "motif": "YDR310C_383",
+    "name": "SUM1_GNCA",
+    "ic": 8.01,
+    "rho_scer": -0.0912,
+    "rho_yarrowia": 0.0026
+  },
+  {
+    "motif": "YBR267W_489",
+    "name": "REI1",
+    "ic": 11.53,
+    "rho_scer": 0.0791,
+    "rho_yarrowia": -0.0027
+  },
+  {
+    "motif": "YCL058C_1417",
+    "name": "FYV5",
+    "ic": 14.0,
+    "rho_scer": -0.2285,
+    "rho_yarrowia": -0.0224
+  },
+  {
+    "motif": "MAL63_136",
+    "name": "MAL63",
+    "ic": 8.45,
+    "rho_scer": 0.2964,
+    "rho_yarrowia": -0.0052
+  },
+  {
+    "motif": "YDR421W_725",
+    "name": "ARO80_tri",
+    "ic": 30.0,
+    "rho_scer": 0.0988,
+    "rho_yarrowia": -0.0103
+  },
+  {
+    "motif": "YML076C_325",
+    "name": "WAR1",
+    "ic": 12.0,
+    "rho_scer": 0.3515,
+    "rho_yarrowia": -0.002
+  },
+  {
+    "motif": "YLL054C_816",
+    "name": "YLL054C",
+    "ic": 9.97,
+    "rho_scer": 0.4052,
+    "rho_yarrowia": 0.0133
+  },
+  {
+    "motif": "YOL089C_799",
+    "name": "HAL9",
+    "ic": 10.04,
+    "rho_scer": 0.3912,
+    "rho_yarrowia": 0.0125
+  },
+  {
+    "motif": "YOL089C_2134",
+    "name": "HAL9_half",
+    "ic": 5.05,
+    "rho_scer": 0.3354,
+    "rho_yarrowia": -0.011
+  },
+  {
+    "motif": "YBR150C_2179",
+    "name": "TBS1_half",
+    "ic": 5.68,
+    "rho_scer": 0.3622,
+    "rho_yarrowia": -0.0188
+  },
+  {
+    "motif": "YLR451W_2135",
+    "name": "LEU3_half",
+    "ic": 4.86,
+    "rho_scer": 0.3185,
+    "rho_yarrowia": 0.0055
+  },
+  {
+    "motif": "YPL248C_2206",
+    "name": "GAL4_half",
+    "ic": 4.77,
+    "rho_scer": 0.3714,
+    "rho_yarrowia": 0.0171
+  },
+  {
+    "motif": "YKL222C_2192",
+    "name": "YKL222C",
+    "ic": 4.66,
+    "rho_scer": 0.3322,
+    "rho_yarrowia": 0.012
+  },
+  {
+    "motif": "YIL130W_2116",
+    "name": "ASG1_half",
+    "ic": 4.68,
+    "rho_scer": 0.3348,
+    "rho_yarrowia": 0.0062
+  },
+  {
+    "motif": "YOR380W_2158",
+    "name": "RDR1_half",
+    "ic": 5.57,
+    "rho_scer": 0.3555,
+    "rho_yarrowia": 0.0193
+  },
+  {
+    "motif": "YPL133C_2226",
+    "name": "RDS2_half",
+    "ic": 5.05,
+    "rho_scer": 0.3408,
+    "rho_yarrowia": 0.0139
+  },
+  {
+    "motif": "YLL054C_2242",
+    "name": "YLL054C_half",
+    "ic": 4.99,
+    "rho_scer": 0.3452,
+    "rho_yarrowia": -0.0011
+  },
+  {
+    "motif": "YHR056C_2164",
+    "name": "RSC30",
+    "ic": 4.27,
+    "rho_scer": 0.4805,
+    "rho_yarrowia": 0.016
+  },
+  {
+    "motif": "YKL015W_2223",
+    "name": "PUT3_half",
+    "ic": 5.43,
+    "rho_scer": 0.3705,
+    "rho_yarrowia": 0.03
+  },
+  {
+    "motif": "YDR421W_2115",
+    "name": "ARO80_mono",
+    "ic": 5.83,
+    "rho_scer": 0.3097,
+    "rho_yarrowia": -0.0127
+  },
+  {
+    "motif": "YBR239C_2188",
+    "name": "ERT1",
+    "ic": 5.76,
+    "rho_scer": 0.2603,
+    "rho_yarrowia": -0.0037
+  },
+  {
+    "motif": "YDR207C_2239",
+    "name": "UME6",
+    "ic": 6.29,
+    "rho_scer": 0.3673,
+    "rho_yarrowia": 0.009
+  },
+  {
+    "motif": "YBL005W_1387",
+    "name": "PDR3",
+    "ic": 5.53,
+    "rho_scer": 0.3958,
+    "rho_yarrowia": -0.0068
+  },
+  {
+    "motif": "YOR162C_2245",
+    "name": "YRR1",
+    "ic": 5.31,
+    "rho_scer": 0.1513,
+    "rho_yarrowia": 0.0088
+  },
+  {
+    "motif": "polyA_AAAAAA",
+    "name": "poly-A",
+    "ic": 6.91,
+    "rho_scer": -0.1112,
+    "rho_yarrowia": 0.0418
+  },
+  {
+    "motif": "polyT_TTTTTT",
+    "name": "poly-T",
+    "ic": 6.91,
+    "rho_scer": -0.1112,
+    "rho_yarrowia": 0.0418
+  }
+]
