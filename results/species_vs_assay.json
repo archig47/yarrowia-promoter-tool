@@ -1,0 +1,26 @@
+{
+  "S. cerevisiae RNA-seq|80": {
+    "zeroshot": -0.0571,
+    "in_domain": 0.035,
+    "in_domain_sd": 0.0377,
+    "n": 5484
+  },
+  "S. cerevisiae RNA-seq|250": {
+    "zeroshot": 0.1206,
+    "in_domain": 0.1692,
+    "in_domain_sd": 0.0224,
+    "n": 5484
+  },
+  "Yarrowia RNA-seq|80": {
+    "zeroshot": -0.0216,
+    "in_domain": 0.3255,
+    "in_domain_sd": 0.0369,
+    "n": 6045
+  },
+  "Yarrowia RNA-seq|250": {
+    "zeroshot": 0.0747,
+    "in_domain": 0.3903,
+    "in_domain_sd": 0.0224,
+    "n": 6045
+  }
+}
