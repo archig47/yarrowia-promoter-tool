@@ -3,9 +3,9 @@
 Living handoff document. Update at the end of every working session.
 Keep it under one page — status board, not a log.
 
-**Last updated:** 2026-09-11
-**Day:** 4 of 14 in progress. Days 1-3 complete (Days 1-2 were finished early, both on Day 1).
-**Calendar:** started 2026-09-04; today 2026-09-11.
+**Last updated:** 2026-09-22
+**Day:** 12-13 (write-up) done. Days 1-11 complete. Days 1-3 complete (Days 1-2 were finished early, both on Day 1).
+**Calendar:** started 2026-09-04; today 2026-09-22.
 **Checkpoint:** 1
 
 ---
