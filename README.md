@@ -1,12 +1,42 @@
 # yeast-promoter-lm
 
-**How few experimental measurements are needed before sequence-based promoter strength
-prediction becomes useful — and does pretraining on genomes substitute for the
-measurements you cannot afford?**
+**A promoter strength predictor for *Yarrowia lipolytica* — an industrially important
+yeast with almost no characterised promoters — plus the measurement-budget study behind it.**
 
-Uses de Boer et al. 2020 yeast GPRA data ([GSE104878](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE104878),
-31.3M random 80 bp promoters measured in living *S. cerevisiae*) as a simulator of data
-scarcity, with transfer tested on a curated *Yarrowia lipolytica* benchmark built here.
+```bash
+python predict.py --top 25          # 25 strongest promoters, genome-wide
+python predict.py --gene YALI0C09988g
+python predict.py --seq ACGTACGT... # score any sequence
+```
+
+**Of the tool's top 25 candidates, 16 are genuinely in the top 10% — against 2.5 by chance.
+A 6.4× enrichment, measured out-of-fold.** For a lab, that is screening 25 promoters
+instead of 100 to find the same number of strong ones.
+
+![scaling curves](figures/fig1_scaling_curves.png)
+
+### What's here
+
+| | |
+|---|---|
+| **The tool** | `predict.py` — ranks all 6,026 *Y. lipolytica* promoters by predicted strength |
+| **Two new benchmarks** | 6,026 promoters from RNA-seq and 81 reporter-measured, neither of which existed in machine-readable form |
+| **The study** | 858 logged runs: how many measurements a sequence-to-expression model needs, and whether genomic pretraining substitutes for them |
+
+### Why you might trust the numbers
+
+- **Predictions were written blind** and committed before any data was downloaded. They were
+  wrong — 0.20 predicted at n=100, 0.42 measured. `PREDICTIONS.md` is append-only.
+- **A 66.6% data leak was caught and fixed.** Two-thirds of the held-out test set was present
+  in the training data, because the "independent" test library turned out to be a dilution of
+  the same pool. Nothing errors when that happens; the scores just come out quietly too good.
+- **One frozen evaluation harness**, sha256 recorded, unchanged since day two. Every number
+  in this repository passes through it.
+- **Negative controls throughout** — shuffled labels, permutation tests on selected maxima,
+  and composition-only baselines reported alongside the deep models.
+- **Two findings were retracted by our own controls** and the corrections are in `STATE.md`:
+  a distal signal that a permutation test showed was chance, and a transfer failure
+  attributed to species that a matched control showed was the assay.
 
 ---
 
