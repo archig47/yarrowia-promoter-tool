@@ -20,7 +20,7 @@ instead of 100 to find the same number of strong ones.
 | | |
 |---|---|
 | **The tool** | `predict.py` — ranks all 6,026 *Y. lipolytica* promoters by predicted strength |
-| **Two new benchmarks** | 6,026 promoters from RNA-seq and 81 reporter-measured, neither of which existed in machine-readable form |
+| **Two new benchmarks** | 6,026 promoters from RNA-seq and 81 reporter-measured, neither of which existed in machine-readable form — published on [🤗 HuggingFace](https://huggingface.co/datasets/archig47/yarrowia-promoter-strength) |
 | **The study** | 858 logged runs: how many measurements a sequence-to-expression model needs, and whether genomic pretraining substitutes for them |
 
 ### Why you might trust the numbers
