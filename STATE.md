@@ -60,7 +60,7 @@ Status values: not started / in progress / blocked / done
 - [x] Baselines reported honestly in README first paragraph — CNN beats DNABERT-2 at n=10k/30k and beats NT almost everywhere; NT falls below ridge at n=300
 - [x] Limitations section written — 12 items in README.md
 - [x] One-command reproduction works from clean clone — `make all` builds venv and regenerates all figures from the committed 840 runs
-- [ ] v1.0 tagged
+- [x] v1.0 tagged — 2026-10-01, pushed to github.com/archig47
 
 ---
 
