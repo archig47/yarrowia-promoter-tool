@@ -11,3 +11,4 @@ wandb/
 *.log
 .DS_Store
 data/raw/yetfasco/
+data/gpu_bundle/
